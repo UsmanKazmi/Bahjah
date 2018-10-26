@@ -1,0 +1,242 @@
+
+<!-- <ion-header>
+
+  <ion-navbar class="headerbackground">
+    <ion-row class="rowheader">
+
+      <img class="headerImage" *ngIf="aDefaultPictureModel" src="{{aDefaultPictureModel.aImageUrl}}"  align="center">
+
+
+
+    </ion-row>
+  </ion-navbar>
+
+
+</ion-header> -->
+<ion-header class="imgHeader custom-header-class">
+
+    <ion-navbar>
+        <img class="headerImage loading-images" *ngIf="aDefaultPictureModel" [src]="aDefaultPictureModel.aImageUrl"  align="center">
+    </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-grid>
+
+
+    <ion-row >
+
+<ion-col col-8>
+
+        <ion-label align="start" *ngIf="data" style="white-space: pre-line;font-size:medium;font-weight:900">{{data.aName}}
+          </ion-label>
+        </ion-col>
+
+<ion-col col-2 class="marginAuto">
+
+
+    <ion-row *ngIf="heartIconFull then heartFull else heartEmpty">
+
+      </ion-row>
+
+    <ng-template #heartEmpty>
+      <button class="heart"  tappable (click)="addToWishList($event,data)"> </button>
+     </ng-template>
+
+      <ng-template #heartFull>
+          <button class="heartfull"  tappable (click)="removeFromWishlist()"> </button>
+       </ng-template>
+
+</ion-col>
+<ion-col col-2 class="marginAuto">
+      <button class="share" tappable (click)="share($event,data)"> </button>
+    </ion-col>
+
+
+
+
+
+
+
+
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-segment [(ngModel)]="cards" style="border-top:1px solid rgba(0, 0, 0, 0.1)" (ionChange)=segmentChanged()>
+
+      <ion-segment-button value="About Card">{{ 'aboutCardText' | translate }}</ion-segment-button>
+      <ion-segment-button value="Terms">{{ 'Terms' | translate }}</ion-segment-button>
+      <ion-segment-button value="Location">{{ 'Location' | translate }}</ion-segment-button>
+
+
+
+    </ion-segment>
+  </ion-row>
+
+  <div [ngSwitch]="cards">
+
+    <ion-list *ngSwitchCase="'About Card'" style="padding-left: 5%;padding-right: 5%;"  >
+
+      <ion-row>
+        <ion-col col-1>
+          <ion-img class="clock"></ion-img>
+
+        </ion-col>
+
+        <ion-col col-11>
+          <ion-label style="font-weight:900;    font-size: large;
+                      ">{{ 'Description' | translate }} </ion-label>
+
+        </ion-col>
+
+
+
+
+
+      </ion-row>
+      <ion-row>
+
+          <span  style="margin-top: -25px; font-weight:900 ;white-space: normal;
+          " [innerHTML]=data.aFullDescription>
+
+            </span>
+      </ion-row>
+
+    </ion-list>
+
+
+
+
+    <ion-list *ngSwitchCase="'Location'">
+      <ion-row style="padding-right: 20px;padding-left: 20px;" *ngIf="addressIsEmpty==true then dataEmpty else dataArray">
+
+      </ion-row>
+
+      <ng-template #dataEmpty>
+        <ion-row>
+          <p class="general-content">
+            {{'locationNotAvailableText' | translate}}
+          </p>
+        </ion-row>
+      </ng-template>
+
+
+
+      <ng-template #dataArray>
+      <ion-row>
+
+        <ion-col col-2>
+          <ion-img class="locationlogo"> </ion-img>
+        </ion-col>
+        <ion-col col-10>
+          <ion-label  *ngIf="nameOfVendor" class="location-label"  > {{nameOfVendor}}
+
+          </ion-label>
+          <!-- <ion-label  *ngIf="emailOfVendor"  align="left" class="location-label">  {{emailOfVendor}}
+
+      </ion-label> -->
+        </ion-col>
+      </ion-row>
+
+
+
+      <ion-grid *ngFor="let item of addressOfVendor"  class="location-grid">
+
+
+
+        <ion-row (click)="openNavigation(item.aAddress1)" style=" border-bottom:1px solid   #f6f6f6; font-size:larger; font-weight: 700;">
+          <ion-label  class="location-address-label"> {{item.aAddress1}}</ion-label>
+          <ion-label  class="location-phone-label" >{{item.aPhoneNumber}}</ion-label>
+          <ion-label  class="location-country-label" >{{item.aCity}} | {{item.aCountryName}}</ion-label>
+        </ion-row>
+<!--
+        <ion-row style="border-bottom:1px solid #f6f6f6; font-size:larger; font-weight: 700;">
+          <ion-label style="text-align: left;">FGF</ion-label>
+
+          <ion-label align="right" placeholder="">ZXCZC</ion-label>
+        </ion-row>
+
+        <ion-row style="border-bottom:1px solid #f6f6f6; font-size:larger; font-weight: 700;">
+          <ion-label style="text-align: left;">  OIL </ion-label>
+          <ion-label align="right" placeholder="">IOLIL</ion-label>
+
+        </ion-row> -->
+
+
+
+      </ion-grid>
+
+</ng-template>
+    </ion-list>
+
+
+    <ion-list *ngSwitchCase="'Terms'" style="padding-left:5%;padding-right: 5%;">
+
+        <ion-row>
+            <ion-col col-1>
+              <ion-img class="clock"></ion-img>
+
+            </ion-col>
+
+            <ion-col col-11>
+              <ion-label style="font-weight:900;    font-size: large;
+                          " align="">{{ 'termsCondition' | translate }} </ion-label>
+
+            </ion-col>
+
+
+
+
+
+          </ion-row>
+          <ion-row>
+            <!-- <p  style=" margin-top: -13px; font-weight:900">
+            </p> -->
+          </ion-row>
+    </ion-list>
+
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+<ion-footer>
+          <ion-row style ="padding:3%;">
+              <ion-col col-6>
+
+              <button  align="center" tappable (click)="confirmPage()" class="buy-button">{{ 'Buy' | translate }}</button>
+              </ion-col>
+
+
+
+
+
+                <ion-col col-6>
+                <ion-item>
+                  <ion-label>{{"Price" | translate}}</ion-label>
+                  <ion-select [(ngModel)]="priceAttr" interface="popover" (ionChange)="priceAttrOnChange($event)">
+                    <ion-option *ngFor="let item of attributeData " value="{{item.aId}}" selected="{{(i==0).toString()}}">{{convertToInteger(item.aPriceAdjustmentValue,product.price)}}.00</ion-option>
+                  </ion-select>
+                </ion-item>
+                </ion-col>
+
+
+
+
+
+
+
+
+  </ion-row>
+</ion-footer>

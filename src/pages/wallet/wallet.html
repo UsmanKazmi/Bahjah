@@ -1,0 +1,146 @@
+<!--
+  Generated template for the SendtofriendPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-row>
+      <button tappable (click)="openHome()" class="back-button disable-hover bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button"
+        ion-button="bar-button"><span class="button-inner">
+          <ion-icon class="back-button-icon icon icon-md back-button-icon-md ion-md-arrow-back" role="img" aria-label="arrow back"></ion-icon><span
+            class="back-button-text back-button-text-md"></span>
+        </span>
+        <div class="button-effect"></div>
+      </button>
+
+      <ion-title>{{ 'Wallet' | translate }}</ion-title>
+    </ion-row>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row *ngIf="addressIsEmpty then dataEmpty else dataArray">
+
+  </ion-row>
+
+  <ng-template #dataEmpty>
+
+    <ion-row class="topRow">
+
+      <ion-img class="walletEmptyImg" align="center">
+
+      </ion-img>
+
+    </ion-row>
+    <ion-row class="botRow">
+
+      <ion-row class="botRow">
+        <ion-label class="titleText">{{ 'WalletEmptyText' | translate }}</ion-label>
+      </ion-row>
+
+      <ion-row class="botRow">
+        <ion-label class="simpleText">{{ 'startCardText' | translate }}</ion-label>
+      </ion-row>
+
+      <ion-row class="rowBottom">
+
+        <ion-buttons>
+
+          <button align="center" class="buttonlogin" tappable (click)="addWallet()">
+            {{ 'Add' | translate }} </button>
+        </ion-buttons>
+
+      </ion-row>
+
+
+
+    </ion-row>
+  </ng-template>
+
+
+  <ng-template #dataArray>
+
+    <ion-grid>
+
+      <ion-row *ngFor="let item of WalletCore" class="payment-info-row">
+
+        <ion-row tappable (click)="generateQRCode($event,item)" class="row-card">
+
+          <ion-col col-4>
+            <img style="width: 110px" src="{{item.aUrlPicture}}">
+          </ion-col>
+
+          <ion-col col-8 style="padding-top: 15px;">
+
+            <ion-row style="margin-top: -25px;">
+
+              <ion-col style="">
+
+              <ion-label class="cardtop">
+                {{item.aProductName}}
+              </ion-label>
+
+            </ion-col>
+
+            <ion-col style="">
+
+              <ion-label ng-model="test" class="payment-price-label">
+                  {{removezero(item)}} {{ 'SAR' | translate }}
+                </ion-label>
+
+              </ion-col>
+
+            </ion-row>
+
+            <ion-row style="padding: 2px;">
+
+
+                <ion-col col-2>
+                    <img class="location-logo">
+                  </ion-col>
+
+              <ion-col col-10>
+              <ion-label class="cardbot">
+                {{item.aRecipientName}}
+              </ion-label>
+            </ion-col>
+
+
+
+            </ion-row>
+
+
+
+
+
+
+
+
+          </ion-col>
+
+
+
+
+        </ion-row>
+
+
+
+
+      </ion-row>
+
+    </ion-grid>
+  </ng-template>
+
+
+
+
+
+
+
+
+</ion-content>

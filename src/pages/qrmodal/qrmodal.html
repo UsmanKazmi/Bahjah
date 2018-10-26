@@ -1,0 +1,30 @@
+<ion-content class="content-modal-backdrop" tappable (click)="closeModal()">
+  <ion-content class="classmodal" padding  style="background:#4d1cce">
+
+
+ <ion-card *ngIf="createdCode">
+
+   <ngx-qrcode [qrc-value]="createdCode">
+
+
+
+   </ngx-qrcode>
+
+<ion-label>{{ 'Scan the QR code for' | translate }}</ion-label>
+<ion-label *ngIf="productName"  >"{{productName}}"</ion-label>
+
+<ion-row class="rowBottom"		>
+
+  <!-- <ion-buttons >
+
+      <button align="center" class="buttonlogin" tappable (click)="closeModal()">
+        {{ 'close' | translate }}    </button>
+    </ion-buttons> -->
+
+</ion-row>
+
+
+ </ion-card>
+
+</ion-content>
+</ion-content>

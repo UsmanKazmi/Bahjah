@@ -1,0 +1,211 @@
+{
+  "newAccount":"حساب جديد",
+  "resetPassword":"هل نسيت كلمة المرور؟",
+  "loginHeading": "دخول",
+  "termsCondition":"شروط الاستخدام",
+  "*emailRequired": "يجب إدخال بريد إلكتروني*",
+  "*invalidEmail": "*البريد الإلكتروني غير صحيح",
+  "placeholderUsername": "البريد الإلكتروني",
+  "placeholderPassword": "كلمة المرور",
+  "*passwordRequired": "*يجب إدخال كلمة مرور*",
+  "registration": "تسجيل حساب جديد",
+  "login": "دخول",
+  "alreadyHaveAccount?":"هل لديك حساب؟",
+  "variousStores":"متاجر متنوعة",
+  "varietyStoreText":"مجموعة متنوعة من المتاجر",
+  "attractiveCardsText":"المميزة لبطاقة أكثر جاذبية!",
+  "CompetitiveText":"أسعار تنافسية",
+  "bahjahCardsText":"مع بطاقات بهجة، استفد من",
+  "CompetitivePriceText":"كثير من الأسعار المنافسة!",
+  "instantDeliveryText":"تسليم فوري",
+  "buyYourselfText":"بإمكانك شراء البطاقة لك",
+  "whomYouText":"أو أرسلها لمن تحب...",
+  "fieldsRequiredText":"*يجب تعبئة هذه الحقول'",
+
+
+  "redeemed":"تم الشراء",
+  "notRedeemed":"جاهزة للشراء",
+
+
+  "passwordDontMatchText":"*كلمة المرور غير مطابقة",
+  "Create":"إنشاء",
+  "Username":"اسم المستخدم",
+  "Email":"البريد الإلكتروني",
+  "Password":"كلمة المرور",
+  "confirmPasswordText":"تأكيد كلمة المرور",
+  "mutBe4LettersText":"*كلمة المرور يجب أن تكون على الأقل 4 خانات",
+
+  "firstnameRequiredText":"*يجب إضافة الاسم الأول",
+  "wrongPasswordText":"كلمة المرور غير صحيحة",
+  "addSerialText":"أضف رقم البطاقة",
+  "scanSerialText":"مسح رقم البطاقة",
+  "addCardText":"أضف بطاقة",
+  "digit15Code":"رمز مكون من 15 خانة",
+
+  "checkEmailText":"شكراً لتسجيلك في تطبيق بهجة! نرجو التحقق من بريدك الإلكتروني لتأكيد التسجيل.",
+  "emailRequiredText":"يجب إدخال البريد الإلكتروني",
+  "passwordRequiredText":"يجب إدخال كلمة المرور",
+
+  "enterEmailText":"أدخل بريدك الإلكتروني",
+
+
+  "skip":"تخطي",
+  "popoverText1":"اختر بطاقة",
+  "popoverText2":"حدد المرسل إليه",
+  "popoverText3":"اترك الباقي لنا",
+
+
+
+  "filterText1":"الأكثر مبيعاً",
+  "filterText2":"أفضل سعر",
+  "filterText3":"المفضلة",
+  "filterText4":"جديد",
+
+
+  "Categories":"التصنيفات",
+
+
+  "lastnameText":"الاسم الأخير",
+  "Wallet":"المحفظة",
+
+  "aboutCardText":"عن البطاقة",
+  "Terms":"الشروط",
+  "Location":"الموقع",
+  "Next":"التالي",
+  "lastnameRequired":"*يجب إدخال الاسم الأخير",
+  "familtyNameText":"اسم العائلة",
+  "firstnameText":"الاسم الأول",
+  "successfullyloginText":" تم تسجيل الدخول بنجاح!",
+  "alreadyRegisteredText":"لديك حساب مسجل؟",
+  "اﻟﺪﻓﻊ":"اﻟﺪﻓﻊ",
+  "cardAddedToWalletText":"تم إضافة البطاقة",
+  "CardName":"بطاقة كوستا",
+  "thankYouText":"شكراً",
+  "phoneNumberText":"رقم الهاتف",
+  "giftCardsText":"بطاقات الهدايا",
+  "totalPrice":"السعر",
+
+"Pay":"الدفع",
+"Card Name":"Gift Card",
+"Card Price":"500 SARS",
+"Scan the QR code for":"Scan the QR code for",
+
+"usedCards":"البطاقات المستخدمة",
+"favourites":"المفضلة",
+"promoCards":"بطاقات ترويجية",
+"help":"مساعدة",
+"language":"اللغة",
+"logout":"تسجيل الخروج",
+"اﻟﻌﺮﺑﻴﺔ":"اﻟﻌﺮﺑﻴﺔ",
+"edit":"تحرير",
+"accounts":"الحسابات",
+"*Required":"*حقول مطلوبة",
+"Name":"الاسم",
+"Mobile":"مثال على رقم الجوال 0501234567",
+"sendToFriendText":"أرسل لصديق",
+"personal":"شخصي",
+
+"Card":"بطاقة",
+"Gift Card":"بطاقة هدية",
+
+"Address":"العنوان",
+  "country":"الدولة",
+  "city":"المدينة",
+  "state":"الولاية",
+  "postalCodeText":"الرمز البريدي",
+
+
+
+
+
+"WalletEmptyText":"لا يوجد لديك بطاقات!",
+"startCardText":"ابدأ مع أحد بطاقاتنا المميزة... ",
+
+"smsLinkText":"email or SMS by clicking the sent link",
+"activateCardsText":"يمكنك تفعيل البطاقة",
+"contentNotAvailableText":"لا يوجد محتوى",
+
+"Description":"الوصف",
+"confirmPaymentText":"تأكيد الدفع",
+"Payment":"الدفع",
+"favorites":"المفضلة",
+"Add":"إضافة",
+"Search":"بحث",
+"Price":"السعر",
+"Buy":"شراء",
+"next":"التالي",
+
+
+"wishlistEmptyText":"المفضلة فارغة.. ",
+"addingToWishlistText":"تمت الإضافة إلى المفضلة",
+"locationNotAvailableText":"لا يوجد موقع",
+
+"loadingDataText":"لحظات...",
+
+
+"orderHistoryText":"الطلبات السابقة",
+
+
+"Great!":"!رائع",
+"cardInWalletText":"البطاقة في محفظتك",
+
+"confirmExitText":"تأكيد الخروج",
+"doYouconfirmExitText":"هل تريد الخروج؟",
+"Cancel":"إلغاء",
+
+"addedToFavText":"!أضيفت الى المفضلة",
+"removedFromFavText!":"!تمت إزالته من المفضلة",
+"addedToCart":"وأضاف إلى السلة. يرجى المتابعة إلى الخروج",
+"cardNotVerified":"البطاقة غير متحقق منها",
+"verifyingCouponText":"...التحقق من القسيمة",
+"fieldsCannotbeEmpty":"لا يمكن أن يكون الحقل خاليًا*",
+"SAR":"رس",
+"loggedOutText" : "!تسجيل الخروج",
+"loggingIntext":"...تسجيل الدخول",
+"Reset":"إعادة تعيين",
+"OK":"موافق",
+"Registering":"تسجيل",
+"yes":"نعم",
+"errorConnectText":"خطأ: الاتصال بالشبكة",
+"chooseGiftCardText":"يرجى اختيار بطاقة هدايا أو الضغط على تخطي",
+"Gift Message":"هدية رسالة",
+"emailAlreadyExistText":"البريد الالكتروني موجود بالفعل",
+"cancel":"لا",
+"invalidPhone":"رقم الهاتف غير صحيح!",
+"pay":"دفع",
+"emailSentText":"أرسل البريد الإلكتروني!",
+"confirmNewPasswordText":"يرجى إدخال كلمة المرور الجديدة",
+"Confirm":"تؤكد",
+"success":"!نجاح",
+"alreadyLoggedIn":"لا يمكنك تغيير كلمة المرور عند تسجيل الدخول بالفعل",
+"needToLoginFirstText":"بحاجة إلى تسجيل الدخول أولا!",
+
+
+"Best Seller":"الأكثر مبيعًا",
+"Best Price":"افضل سعر",
+"Most Preferred":"الأكثر تفضيلا",
+"New":"الجديد",
+"passwordAlreadyUsedText":"كلمة المرور هذه مستخدمة من قبل!",
+"invalidLink":"خطأ: رابط غير صالح",
+"Edit Account":"تحرير الحساب",
+"update":"تحديث",
+"Change Password":"تغيير كلمة السر",
+"placeholderOldPassword":"كلمة المرور القديمة",
+"New Password":"كلمة السر الجديدة",
+"Confirm New Password":"تأكيد كلمة المرور الجديدة",
+"wrongOldPassword":"كلمة المرور القديمة هي خاطئة",
+"loadingText":"لحظات...",
+"signInAgain":"الرجاء تسجيل الدخول للمتابعة !نجاح...",
+"successfullyUpdatedText":"تم التحديث بنجاح",
+"finishingOrderText":"ترتيب الانتهاء ...",
+"NewAddressText":"العنوان الجديد"
+
+
+
+
+
+
+
+
+}
+

@@ -1,0 +1,237 @@
+// .ltr .loginInput{
+//     ion-label{
+//         text-align:left;
+
+//     }
+// }
+
+
+
+// .rtl .loginInput{
+//     ion-label{
+//         text-align:right;
+
+
+//     }
+// }
+page-login {
+
+  .item-ios {
+    position: relative;
+    font-size: 1.7rem;
+    color: #000;
+    background-color: #fff;
+    -webkit-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+    border-radius: 10px;
+    border: 0.55px solid #ededed;
+    height: 60px;
+    padding: 0px !important;
+}
+  .mytoast{
+
+    background: url(../assets/imgs/exclaimation-toast.png) no-repeat center center;
+
+  }
+    .toolbar-background-md {
+        background: transparent;
+    }
+    .toolbar-background-ios {
+        background: transparent;
+    }
+
+
+    .MainLogo{
+      background: url(../assets/imgs/logo2.png) no-repeat center center;
+      display: block;
+      width: 50%;
+      height: 20vw;
+      background-size: contain;
+      margin: auto;
+
+    }
+    .backbutton{
+      background: url(../assets/imgs/back.png) no-repeat left center !important;
+      color: #424242;
+      background-color: transparent;
+      background-size: 15px;
+
+    }
+
+    .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+      background: url(../assets/imgs/back.png) no-repeat left center;
+      color: #424242;
+      background-color: transparent;
+      background-size: 11px;
+      top: 7px;
+      left: 5px;
+      /* height: 40px; */
+      /* width: 6px; */
+    }
+    .back-button-icon-md {
+      margin: 0;
+      color: transparent;}
+
+
+    .item-md {
+      position: relative;
+      font-size: 1.7rem;
+      color: #000;
+      background-color: #fff;
+      -webkit-transition: background-color 200ms linear;
+      transition: background-color 200ms linear;
+      border-radius: 10px;
+      border: 0.55px solid #ededed;
+      height: 60px;
+      margin-top: -1px !important;
+
+
+  }
+    // .item-md.item-input.item-input-has-focus .item-inner, .item-md.item-input.input-has-focus .item-inner{
+    //   border-bottom-color:#ededed !important;
+
+
+    // }
+    .align-center{
+      align-self: center;
+      margin-top: 17vw;
+
+    }
+    .grid {
+      padding: 35px 25px 0px !important;
+    }
+    .buttonlogin{
+
+      margin-bottom: 5%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block !important;
+      color: white;
+      border-radius: 40px;
+      height: 12vw;
+      font-size: x-large;
+      font-weight: 700;
+      color: #ffffff;
+      background-color: #4f14d8;
+      text-align: center;
+      padding-left: 60px !important;
+      padding-right: 60px !important;
+      padding-bottom: 6px;
+      margin-top: 5%;
+
+
+
+
+    }
+    .align-baseline{
+      align-self: baseline !important;
+      margin: auto;
+
+    }
+
+
+    .button-inner {
+        color: #4f14d8;
+    }
+
+   /*  .button-md {
+        border-radius: 40px;
+        height: 7%;
+        width: 40%;
+        font-size: x-large;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #4f14d8;
+        top: 5%;
+
+         //margin: 0.4rem 0.2rem;
+    }
+    .button-ios {
+        border-radius: 40px;
+        height: 7%;
+    width: 40%;
+        font-size: x-large;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #4f14d8;
+        top: 5%;
+
+         //margin: 0.4rem 0.2rem;
+    } */
+
+
+    .alert-md .alert-button-group {
+
+      justify-content: center !important;
+    }
+    .text-input-md {
+        margin: 11px 8px 11px 0;
+        padding: 0;
+        width: calc(100% - 8px);
+        //text-align: left;
+    }
+    .text-input-ios {
+        margin: 11px 8px 11px 0;
+        padding: 0;
+        width: calc(100% - 8px);
+       // text-align: left;
+    }
+
+    .text-input-ios::placeholder {
+        color: #dedede;
+        text-align:left;
+
+      }
+      .text-input-md::placeholder {
+        color: #dedede;
+        text-align:left;
+
+      }
+
+
+      .inputLabel {
+        right: 1px !important;
+        background-color: transparent;
+        color: red !important;
+        text-align: end;
+        font-size: small;
+        font-weight: 700;
+    }
+       .inputLabelheading {
+        right: 1px !important;
+        background-color: transparent;
+        color: red !important;
+        text-align: right;
+        font-size: small;
+        font-weight: 700;
+    }
+    .validation-end{
+      width: 100%;
+      max-width: -webkit-fill-available;
+      text-align: end;
+    }
+    .item-input ion-input, .item-input ion-textarea {
+      position: absolute !important;
+  }
+  input[type="text"]:-moz-placeholder {
+    text-align: start;
+}
+input[type="text"]:-ms-input-placeholder {
+    text-align: start;
+}
+input[type="text"]::-webkit-input-placeholder {
+    text-align: start;
+}
+
+input[type="password"]:-moz-placeholder {
+  text-align: start;
+}
+input[type="password"]:-ms-input-placeholder {
+  text-align: start;
+}
+input[type="password"]::-webkit-input-placeholder {
+  text-align: start;
+}
+
+
+}

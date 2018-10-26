@@ -1,0 +1,281 @@
+page-walletselectedcard {
+        .headerbackground {
+          padding: 0;
+        }
+        .rowheader {
+          background: url("../assets/imgs/bg_header.png");
+          background-size: contain;
+          padding-top: 10%;
+          padding-bottom: 10%;
+        }
+        .headerImage {
+          height: 115px;
+          width: auto;
+          margin: auto;
+          background: url("../assets/imgs/card1.png") no-repeat center center;
+          background-size: contain;
+        }
+        .heart {
+          background: url("../assets/imgs/heart.png") no-repeat center;
+          background-color: transparent;
+          color: #9d44ff;
+          height: 40px;
+          width: 40px;
+          border-radius: 30px;
+          margin: auto;
+          margin-right: 10px;
+          box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+        }
+        .share {
+          background: url("../assets/imgs/share.png") no-repeat center;
+          background-color: transparent;
+          color: #9d44ff;
+          height: 40px;
+          width: 40px;
+          margin: auto;
+          border-radius: 30px;
+          margin-right: 10px;
+          box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+        }
+        .segment-md .segment-button {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: 0;
+          height: 4.2rem;
+          border-bottom-width: 2px;
+          border-bottom-style: solid;
+          border-bottom-color: rgba(0, 0, 0, 0.1);
+          font-size: 1.2rem;
+          font-weight: 600;
+          line-height: 4rem;
+          text-transform: uppercase;
+          color: #000204;
+          background-color: transparent;
+          opacity: 0.7;
+          -webkit-transition: 100ms all linear;
+          transition: 100ms all linear;
+          padding: 0 6px;
+        }
+        .segment-ios .segment-button {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          width: 0;
+          height: 4.2rem;
+          border-bottom-width: 2px;
+          border-bottom-style: solid;
+          border-bottom-color: rgba(0, 0, 0, 0.1);
+          font-size: 1.2rem;
+          font-weight: 600;
+          line-height: 4rem;
+          text-transform: uppercase;
+          color: #000204;
+          background-color: transparent;
+          opacity: 0.7;
+          -webkit-transition: 100ms all linear;
+          transition: 100ms all linear;
+          padding: 0 6px;
+          border: 1px solid #f3f3f3 !important;
+        }
+        .segment-md .segment-button.activated,
+        .segment-md .segment-button.segment-activated {
+          color: #4f14d8;
+          border-color: #4f14d8;
+        }
+        .segment-ios .segment-button.activated,
+        .segment-ios .segment-button.segment-activated {
+          color: #4f14d8 !important;
+          border-color: #4f14d8;
+        }
+        .segment-ios .segment-button.segment-activated {
+          color: #fff;
+          background-color: transparent !important;
+          opacity: 1;
+          -webkit-transition: 100ms all linear;
+          transition: 100ms all linear;
+        }
+        .plus {
+          background: url("../assets/imgs/plus.png") no-repeat center;
+          background-size: contain;
+          background-color: #0000000d;
+          color: #9d44ff;
+          height: 30px;
+          width: 100%;
+          border-radius: 20px;
+          padding-bottom: 5px;
+        }
+        .minus {
+          background: url("../assets/imgs/minus.png") no-repeat center;
+          background-size: contain;
+          background-color: #0000000d;
+          color: #9d44ff;
+          height: 30px;
+          width: 100%;
+          border-radius: 20px;
+          padding-bottom: 5px;
+        }
+        .middle-value {
+          background-color: #0000000d;
+          color: #002dff;
+          height: 30px;
+          padding: -2px;
+          padding-bottom: 0px;
+          width: 100%;
+          font-weight: 800;
+          font-size: x-large;
+          border-radius: 20px;
+          padding-bottom: 5px;
+        }
+        .toolbar-content-ios {
+        //   margin-left: -10vw !important;
+        }
+        .buy-button {
+          width: 80%;
+          height: 10vw;
+          font-weight: 800;
+          font-size: x-large;
+          background-color: #ff5560;
+          color: white;
+          border-radius: 20px;
+          padding-bottom: 6px;
+        }
+      //    .item-inner {
+      //     position: relative;
+      //       font-weight: 900 !important;
+      //       font-size: large !important;
+      // }
+
+      //   .item-ios.item-block .item-inner {
+      //     position: relative;
+      //     font-weight: 900 !important;
+      //     font-size: large !important;
+      //     }
+
+      .location-grid {
+        width:100%;
+        padding: 5px 25px !important;
+      }
+      .location-address-label{
+        display: inline;
+        margin: 3px 5px 3px 1px !important;
+
+        white-space: normal;
+
+
+        font-size: small;
+        text-align: left;
+      }
+      .location-country-label{
+        white-space: normal;
+        margin: 3px 8px 3px 18px !important;
+
+
+        font-size: small;
+        text-align: right;
+
+      }
+        .location-label {
+          font-size: x-large;
+          color: #4d2add;
+          font-weight: 700;
+        }
+        .back-button.show-back-button {
+          position: absolute;
+          display: inline-block;
+          top: 2vw;
+          left: 1vw;
+        }
+        .locationlogo {
+            background: url("../assets/imgs/location.png") no-repeat center center;
+      width: 100%;
+      margin-top: 2vw;
+      height: 100%;
+      background-size: 50%;
+        }
+        .clock {
+          background: url("../assets/imgs/clock.png") no-repeat left center;
+          width: 100%;
+          height: 100%;
+          background-size: 100%;
+        }
+        .grid {
+          // padding: 5px 0px !important;
+        }
+        .marginAuto {
+          margin: auto;
+        }
+        .headerImage2 {
+          height: 115px;
+          width: 0%;
+          background: url("../assets/imgs/card1.png") no-repeat center center;
+          background-size: contain;
+        }
+        ion-select {
+
+          display: flex;
+          overflow: hidden;
+          background-color:transparent;
+          max-width: 100%;
+        }
+        [col-6] {
+          margin: auto !important;
+
+      }
+        ion-footer {
+
+          height: 25vw !important;
+      }
+      .alert-button {
+        position: relative;
+        width: 20vw !important;
+        text-align: center;
+        /* text-align: end; */
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        font-weight: 500;
+        text-transform: none;
+        color: white;
+        background-color: #4f14d8;
+        margin: 0 20px 0 0;
+        padding: 10px;
+        -webkit-transform: translate(0%) !important;
+        /* transform: translate(-50%); */
+        margin-bottom: 5%;
+      }
+      .alert-ios .alert-button {
+        position: relative;
+        width: 20vw !important;
+        text-align: center;
+        /* text-align: end; */
+        border-radius: 25px;
+        position: relative;
+        overflow: hidden;
+        font-weight: 500;
+        text-transform: none;
+        color: white;
+        background-color: #4f14d8;
+        margin: 0 20px 0 0;
+        padding: 10px;
+        -webkit-transform: translate(0%) !important;
+        /* transform: translate(-50%); */
+        margin-bottom: 5%;
+      }
+      .general-content {
+        margin: auto;
+
+        width: 100%;
+        text-align: center;
+        /* margin: 100px auto 20px; */
+        font-size: 21px;
+        /* padding: 20px; */
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        color: #ff4475;
+    }
+
+
+}

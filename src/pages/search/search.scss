@@ -1,0 +1,126 @@
+    page-search {
+
+
+
+        .card{
+
+            padding: 5%;
+            background-color: #f6f6f6;
+            -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+             box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+        }
+
+        .card6{
+            background: url("../assets/imgs/card6.png") no-repeat center center ;
+            background-size: contain;
+            width: 100%;
+            height: 100px;
+
+        }
+        .card-title-md {
+
+          font-size: 15px !important;
+
+      }
+      .card-title-ios {
+        font-size: 17px !important;
+
+    }
+        // .categoryImage{
+
+
+        //   /* max-width: 100%; */
+        //   height: 70% !important;
+        //   width: 100%!important;
+        //   border: 0!important;
+        // }
+
+
+
+
+
+        ion-img {
+          width: 100%;
+          height: 24vw;
+          border-radius: 50%;
+          margin: auto;
+
+      }
+
+
+.label-md{
+  margin:25px 10px 3px 15px !important
+
+}
+
+ .labelClass{
+  padding-left: 3% !important;
+  padding-right: 3%!important;
+  background-color:transparent!important;
+  color:#4d1cce !important;
+  font-size: 19px!important;
+   font-weight: 700!important;
+
+}
+.margin-bottom{
+
+  margin-bottom: 10%;
+
+}
+.label-ios {
+  margin: 24px 11px 1px 15px !important;
+}
+
+
+.searchbar-ios.searchbar-left-aligned .searchbar-search-icon {
+  background-size: 20px !important;
+  position: relative !important;
+  left: 20px !important;
+  right: 20px;
+  width: 6vw !important;
+  height: 6vw !important;
+  top: 41px !important;
+}
+.searchbar-ios.searchbar-left-aligned .searchbar-input {
+  padding-left: 13vw !important;
+}
+.searchbar-md .searchbar-input {
+  direction: inherit;
+
+  margin-left:0px;
+  font-size: x-large;
+  padding: 9px 55px 0px 40px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
+  color: gray!important;
+}
+.searchbar-ios .searchbar-search-icon {
+  top: 5vw !important;
+  margin-top: 0px !important;
+
+}
+
+.searchbar-ios .searchbar-input {
+  direction: inherit;
+
+  font-size: x-large;
+  height: 12vw;
+  padding: 0px 55px 0px 29px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
+  color: gray!important;
+}
+.searchbar-md .searchbar-search-icon, .searchbar-md .searchbar-md-cancel {
+  position: relative;
+  left:8px;
+  top: 35px;
+  width: 40px;
+  height: 23px;
+  right: 8px;
+
+}
+
+
+
+
+}

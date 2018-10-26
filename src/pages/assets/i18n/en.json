@@ -1,0 +1,176 @@
+{
+
+  "newAccount":"New Account",
+  "resetPassword":"Reset Password",
+  "loginHeading": "Login",
+  "termsCondition":"Terms and Conditions",
+  "*emailRequired": "Email Required*",
+  "*invalidEmail": "*Invalid Email",
+  "placeholderUsername": "Email",
+  "placeholderPassword": "Password",
+  "*passwordRequired": "*Password Required*",
+  "registration": "registration",
+  "login": "Login",
+  "alreadyHaveAccount?":"Already have an account?",
+  "variousStores":"Various Stores",
+  "varietyStoreText":"Variety of specialty stores",
+  "attractiveCardsText":"and Attractive Cards",
+  "CompetitiveText":"Competitive prices",
+  "bahjahCardsText":"with Bahjah cards, benefit from",
+  "CompetitivePriceText":"the competitive prices",
+  "instantDeliveryText":"Instant delivery",
+  "buyYourselfText":"buy for yourself or send to",
+  "whomYouText":"whom you love",
+  "fieldsRequiredText":"*All fields are required'",
+
+
+  "redeemed":"Redeemed",
+  "notRedeemed":"Not Redeemed",
+
+
+  "passwordDontMatchText":"*Passwords don't match",
+  "Create":"Create",
+  "Username":"Username",
+  "Email":"Email",
+  "Password":"Password",
+  "confirmPasswordText":"Confirm Password",
+  "mutBe4LettersText":"*must be atleast 4 characters",
+
+  "firstnameRequiredText":"*first name is required",
+  "wrongPasswordText":"Wrong Password",
+  "addSerialText":"add serial number",
+  "scanSerialText":"scan serial number",
+  "addCardText":"addCardText",
+  "digit15Code":"digit15Code",
+
+  "checkEmailText":"Thank you for Registering with. Please check your email to Activate your account.",
+  "emailRequiredText":"Email is required",
+  "passwordRequiredText":"Password Required",
+
+  "enterEmailText":"Enter your Email",
+
+
+  "skip":"skip",
+  "popoverText1":"choose card",
+  "popoverText2":"Select the recipient",
+  "popoverText3":"Leave the rest to us",
+
+
+
+
+
+
+  "filterText1":"Best Seller",
+  "filterText2":"Best Price",
+  "filterText3":"Most Preferred",
+  "filterText4":"New",
+
+
+  "Categories":"Categories",
+
+
+  "lastnameText":"Last Name",
+  "firstnameText":"First Name",
+  "Wallet":"Wallet",
+
+  "aboutCardText":"About Card",
+  "Terms":"Terms",
+  "Location":"Location",
+  "Next":"Next",
+  "lastnameRequired":"*last name is required",
+  "familtyNameText":"family name",
+  "successfullyloginText":" Successfully Logged in!",
+  "alreadyRegisteredText":"Already Registered?",
+  "اﻟﺪﻓﻊ":"اﻟﺪﻓﻊ",
+  "cardAddedToWalletText":"The Card has been added to your Wallet",
+  "thankYouText":"Thank You",
+  "phoneNumberText":"Phone Number",
+  "giftCardsText":"Gift Cards",
+  "totalPrice":"Total Price",
+
+"Pay":"Pay",
+"Card Name":"Gift Card",
+"Card Price":"500 SARS",
+"Scan the QR code for":"Scan the QR code for",
+
+"usedCards":"used cards",
+"favourites":"favourites",
+"promoCards":"promotional cards",
+"help":"help",
+"language":"language",
+"logout":"logout",
+"اﻟﻌﺮﺑﻴﺔ":"اﻟﻌﺮﺑﻴﺔ",
+"accounts":"accounts",
+"*Required":"*Required",
+"Name":"Name",
+"Mobile":"Mobile",
+"sendToFriendText":"send to friend",
+"personal":"personal",
+
+"Card":"Card",
+"Gift Card":"Gift Card",
+
+"Address":"Address",
+  "country":"country",
+  "city":"city",
+  "state":"state",
+  "postalCodeText":"postal code",
+
+
+
+
+"WalletEmptyText":"Your Wallet is Empty",
+"startCardText":"You can now start with our cards...",
+
+"smsLinkText":"email or SMS by clicking the sent link",
+"activateCardsText":"You can activate cards recieved by",
+"contentNotAvailableText":"The content you are looking for is currently not available.",
+
+"Description":"Description",
+"confirmPaymentText":"Confirm Payment",
+"Payment":"Payment",
+"favorites":"favorites",
+"Add":"Add",
+"Search":"Search",
+"Price":"Price",
+"Buy":"Buy",
+"next":"next",
+
+
+"wishlistEmptyText":"WishList is empty...",
+"addingToWishlistText":"Thank you! for adding to wishlist",
+"locationNotAvailableText":"Location is not available",
+
+"loadingDataText":"Loading data...",
+
+
+"orderHistoryText":"Order History",
+
+"Great!":"Great!",
+"cardInWalletText":"The card is in your wallet",
+
+"confirmExitText":"Confirm Exit",
+"doYouconfirmExitText":"Do you want Exit?",
+"Cancel":"Cancel",
+"cancel":"cancel",
+
+"addedToFavText":"Added to favourites!",
+"removedFromFavText!":"Removed from favourites!",
+"addedToCart":"Added to Cart. Please proceed to checkout.",
+
+"cardNotVerified":"Card not verified",
+"verifyingCouponText":"Verifying Coupon...",
+"fieldsCannotbeEmpty":"*Field cannot be empty",
+"SAR":"SAR",
+"loggedOutText" : "Logged out!",
+"loggingIntext":"Logging In...",
+"Reset":"Reset",
+"OK":"OK",
+"Registering...":"Registering...",
+"yes":"yes",
+"errorConnectText":"Error: Connecting to the network",
+"chooseGiftCardText":"Please choose a gift card or press Skip",
+"Gift Message":"Gift Message",
+"emailAlreadyExistText":"Email already exist!"
+
+}

@@ -1,0 +1,86 @@
+
+<ion-header>
+  <ion-grid  style="padding:7%; height:20%">
+
+    <ion-row>
+
+
+      <ion-col col-4 style="align-self: flex-end;">
+
+
+
+        <ion-row class="header-category-top-spacing">
+          <button class="side-category-button" tappable (click)="openGridmodal()" ion-button> <ion-img class="buttons-2"> </ion-img>
+          </button>
+
+          <button class="filter-button" tappable (click)="openFiltermodal()" ion-button><ion-img class="buttons-3"></ion-img></button>
+
+<!-- 
+      <ion-select  interface="popover" >
+                    <ion-option >sdd</ion-option>
+                    <ion-option >sdd</ion-option>
+
+                  </ion-select>       -->
+                </ion-row>
+
+
+
+
+
+      </ion-col>
+      <ion-col col-3>
+      </ion-col>
+    <ion-col col-5>
+        <ion-img class="MainLogo"></ion-img>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+
+
+
+
+
+</ion-header>
+<ion-content >
+
+<!-- <ion-list>
+  <ion-item *ngFor="let index of data" >
+
+  </ion-item>
+</ion-list> -->
+
+  <ion-row *ngIf="data then dataArray else dataEmpty">
+
+  </ion-row>
+
+  <ng-template #dataEmpty>
+    <ion-row>
+      <p class="general-content">
+        {{'contentNotAvailableText' | translate}}
+      </p>
+    </ion-row>
+  </ng-template>
+
+  <ng-template #dataArray>
+    <ion-row >
+      <ion-col *ngFor="let item of data" col-6  (click)="getIDfromHomepage($event, item,item.aId)">
+
+    <ion-card>
+
+        <img [src]="item.aUrlPicture"  class="loading-images">
+        <ion-card-content>
+        <ion-card-title>
+
+          {{ item.aName }}
+        </ion-card-title>
+
+      </ion-card-content>
+    </ion-card>
+    </ion-col>
+  </ion-row>
+  </ng-template>
+
+
+</ion-content>

@@ -1,0 +1,383 @@
+page-addcardsuccess {
+
+
+
+
+    .toolbar-background-md {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .toolbar-background-ios {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .topRow{
+      height: 150px;
+
+
+    }
+    .toolbar-title-md {
+
+      padding-right: 15vw !important;
+
+    }
+    .botRow{
+        width:100%;
+
+    }
+    .titleText{
+        text-align: center;
+        color: #4d1cce;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+    .simpleText{
+      text-align: center;
+      color: #4d1cce;
+      font-weight: 700;
+      font-size: xx-large;
+      width: 100%;
+      border: none;
+
+    }
+    .label-md {
+      margin: 30px 1px 1px 0 ;
+    }
+    .simpleText2{
+      margin: 10px 1px 1px 0 ;
+
+  text-align: center;
+    color: gray;
+    font-weight: 700;
+    font-size: x-large;
+    width: 100%;
+    border: none;
+    }
+    .label-ios {
+      margin: 30px 1px 1px 0 !important;
+    }
+    .smallText{
+        text-align: center;
+
+        color: black;
+        font-weight: 800;
+        font-size: small;
+    }
+    .cardImage{
+        height: 100px;
+        width: 100%;
+
+        background: url("../assets/imgs/card1.png") no-repeat center center ;
+        background-size: contain;
+    }
+    .col1{
+
+    }
+.col2{
+
+}
+.col3{}
+
+
+.walletEmptyImg{
+  width: 100%;
+  height: 35px;
+  margin-top: 13vw;
+  /* margin: auto; */
+  background: url(../assets/imgs/barcode@3x.png) no-repeat center center;
+  background-size: contain;
+  height: 100px;
+
+}
+.buttonlogin{
+  margin-bottom:5%;
+
+
+margin-left: auto;
+margin-right: auto;
+display: block !important;
+color: white;
+
+font-size: medium; font-weight: 500; color: #ffffff;
+background-color:#4d1cce;
+// padding: 6px;
+text-align: center;
+padding-bottom: 6px;
+margin: auto;
+padding-left: 50px;
+padding-right: 50px;
+height: 40px;
+
+}
+.bar-buttons-md {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: auto;
+}
+.bar-buttons-ios {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: auto;
+}
+.rowBottom{
+  width: 100%;
+  margin-top: 10%;
+
+
+}
+
+.buttonlogin{
+  margin-bottom:5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block !important;
+  color: white;
+  border-radius: 40px;
+  height: 13vw;
+  // width: 50%;
+  font-size: x-large; font-weight: 500; color: #ffffff;
+  background-color: #4d1cce;
+  // padding: 6px;
+  text-align: center;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+  padding-bottom: 6px;
+  margin-top: 5%;
+
+  }
+  .inputText{
+    /* width: 50%; */
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    /* border-bottom: 1px solid gray; */
+    margin: auto;
+  }
+  .button-md {
+    //margin: 0.4rem 0.2rem;
+  }
+  .button-ios {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 3rem;
+    width: 13rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #9d44ff;
+    top: 5%;
+    right: 10%; //margin: 0.4rem 0.2rem;
+  }
+  .text-input-md {
+    margin: 11px 8px 11px 0;
+    padding: 0;
+    width: calc(100% - 8px);
+    text-align: right;
+  }
+  .text-input-ios {
+    margin: 11px 8px 11px 0;
+    padding: 0;
+    width: calc(100% - 8px);
+    text-align: right;
+  }
+  .text-input-ios::placeholder {
+    color: #dedede;
+  }
+  .text-input-md::placeholder {
+    color: #dedede;
+  }
+  .small-button{
+
+
+
+  }
+  .labelPayment{
+    font-weight: 900;
+    font-size: large;
+
+  }
+  .col-one{
+    padding: 3vw;
+
+    margin-right: 2vw;
+    margin: auto;
+
+
+  }
+  .payment-image{
+    width: 100%;
+    height: 17vw;
+  //  margin-left: 4vw;
+    background: url("../assets/imgs/card1.png") no-repeat center;
+    background-size :contain;
+
+  }
+  .payment-div{
+    margin: auto;
+    width: 100%;
+
+    background-color: white;
+
+    border:1px solid #0d6cfd;
+    box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+
+  }
+  .payment-info-label{
+    margin: 3px 8px 3px 0 !important;
+    font-weight: 900;
+    color: lightgray;
+
+  }
+  .payment-name-col{
+    align-self:baseline;
+    margin: auto;
+  }
+  .payment-info-row{
+         background-color:#f8f8f8 ;
+         margin-bottom: 5vw;
+         margin-top: 5vw;
+
+  }
+  .grid {
+    padding: 10px 10px !important;
+}
+.edit-text{
+  font-size:small;
+  font-weight: 700;
+  color: lightgray;
+  margin: auto;
+  text-align: right;
+      margin-top: 8vw;
+
+}
+.card-image{
+  //background: url("../assets/imgs/card3.png") no-repeat center center ;
+  height: 21vw;
+  width: 100%;
+  padding: 52px;
+
+
+}
+.cardtop{
+  text-align: start !important;
+  margin: 0px 0px 0px 0 !important;
+    font-size: 16px !important;
+    color: black !important;
+    font-weight: 900;
+    white-space: inherit;
+
+}
+
+.cardbot{
+  text-align: start;
+  /* left: 8vw; */
+  margin:0px 30px !important;
+  font-size: small !important;
+  color: black !important;
+  /* position: relative; */
+  font-weight: 600;
+
+}
+.colcard{
+  align-self: center;
+
+}
+.toolbar-title-md {
+
+  padding-right: 15vw !important;
+
+}
+.location-logo{
+    position:absolute;
+    padding: 10px;
+    //  left: 1px;
+    background-size: contain !important;
+    height: 6vw;
+    //width: 100%;
+    background: url(../assets/imgs/send_icon-xxxhdpi.png) no-repeat left;
+}
+.payment-price-label{
+  margin: 0px 0px 0px 0 !important;
+
+  text-align: end;
+  font-weight: 900;
+  font-size: large;
+}
+.location-logo-col{
+  padding: 0px !important;
+  margin: auto;
+
+}
+.giftcard-label{
+  color: black !important;
+  padding: 10px;
+  font-weight:700;
+  text-align: right;
+  font-weight: 600;
+  font-size: larger;
+
+}
+[col-8] {
+  -webkit-box-flex: 0;
+  margin: auto !important;}
+
+.buttonlogin{
+  margin-bottom:5%;
+
+padding-left:10%;
+padding-right:10%;
+
+
+margin-left: auto;
+margin-right: auto;
+display: block !important;
+color: white;
+border-radius: 40px;
+height: 40px;
+// width: 50%;
+font-size: x-large; font-weight: 500; color: #ffffff;
+background-color: #ff5560;
+// padding: 6px;
+text-align: center;
+padding-bottom: 6px;
+margin-top: 5%;
+
+}
+.line{
+ // border: 1px solid black;
+  width: 100%;
+  height: 1px;
+  color:black;
+  background-color: lightgray ;
+  margin-top: -5%;
+
+}
+.row-card{
+  width:100% !important;
+  padding: 10px 20px;
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+

@@ -1,0 +1,69 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar>
+
+    <!-- <ion-buttons left class="backbutton">
+
+    </ion-buttons> -->
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="splash loginInput">
+
+    <ion-row class="align-center">
+        <ion-img class="MainLogo"> </ion-img>
+      </ion-row>
+  <ion-grid >
+    <ion-row>
+        <ion-col>
+      <ion-label style="background-color:transparent; color:gray;font-size: large;    font-weight: 900;">
+        {{ 'loginHeading' | translate }} </ion-label>
+      </ion-col>
+
+      <ion-col class="align-baseline">
+          <ion-label class="inputLabel validation-end" *ngIf="username.hasError('pattern') && username.touched"   > {{ '*invalidEmail' | translate }}</ion-label>
+
+    </ion-col>
+    </ion-row>
+
+    <form (click)="deviceHepticFeedback()" [formGroup]="formgroup">
+      <ion-item >
+        <ion-input   maxlength="64" value=""  type="text" formControlName="username" placeholder="{{ 'placeholderUsername' | translate }} "  disallow-spaces></ion-input>
+        <ion-label class="inputLabel validation-end" *ngIf="username.hasError('required') && username.touched" >{{ '*emailRequired' | translate }} </ion-label>
+
+
+      </ion-item>
+
+      <ion-item>
+        <ion-input maxlength="64" value=""  type="password" formControlName="password" placeholder="{{ 'placeholderPassword' | translate }}"> </ion-input>
+        <ion-label class="inputLabel validation-end" *ngIf="password.hasError('required') && password.touched"  >{{ '*passwordRequired' | translate }}</ion-label>
+
+      </ion-item>
+    </form>
+
+  </ion-grid>
+
+
+  <ion-buttons>
+
+    <button align="center" class="buttonlogin" tappable (click)="openHomePage()">
+      {{ 'login' | translate }}    </button>
+  </ion-buttons>
+
+
+  <div padding align="center" style=" padding-top: 2%">
+      <button tappable (click)="openRegistration()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;
+      font-weight: 900; "> {{ 'registration' | translate }}</button>
+    <button tappable (click)="openResetPassword()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;
+      font-weight: 900;">{{ 'resetPassword' | translate }}</button>
+
+
+  </div>
+
+</ion-content>

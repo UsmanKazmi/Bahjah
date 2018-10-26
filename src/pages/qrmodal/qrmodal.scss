@@ -1,0 +1,212 @@
+page-qrmodal {
+
+    // .label-md {
+    //     margin: -10px 0px 20px 0px;
+    // }
+    // .label-ios {
+    //     margin: -10px 0px 20px 0px;
+    // }
+    .bar-buttons-md[end] {
+        text-align: start;
+        -webkit-box-ordinal-group: 6;
+        -webkit-order: 5;
+        -ms-flex-order: 5;
+        order: 5;
+        margin: auto;
+
+    }
+    .label-ios {
+      margin: 0px 0px 0px 0;
+  }
+  .label-md {
+    margin: 0px 0px 0px 0;
+}
+
+
+    .rowBottom{
+        width: 100%;
+        align-self: center;
+        margin-top: 5vw;
+      
+      
+      }
+      
+    .bar-buttons-ios[end] {
+      height: 10vw;
+      text-align: start;
+      -webkit-box-ordinal-group: 6;
+      -webkit-order: 5;
+      -ms-flex-order: 5;
+      order: 5;
+      margin: auto;
+
+  }
+  .bar-buttons-md {
+      margin: auto;
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+.bar-buttons-ios {
+    margin: auto;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+ion-label {
+    color: white;
+    margin: 10px 0px 10px 0px;
+    text-align: center;
+    margin: 0;
+    display: block;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: inherit;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 800;
+    font-size: x-large;
+}
+.content-modal-backdrop {
+    background-color: transparent !important;
+    z-index: 0;
+  }
+  
+  .buttonlogin{
+    padding-bottom: 2vw;
+
+    /* margin-bottom: 5%; */
+    padding-left: 15vw;
+    padding-right: 15vw;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    color: white;
+    border-radius: 40px;
+    height: 40px;
+    font-size: x-large;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #ff5560;
+    text-align: center;
+    /* padding-bottom: 6px; */
+    margin-top: 5%;
+
+}
+  .card-md {
+    margin: 10px;
+    border-radius: 2px;
+    padding-top: 20px;
+
+    width: inherit;
+    font-size: 1.4rem;
+    background: transparent;
+     -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 5px 0 rgba(0, 0, 0, 0);
+     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+.card-ios {
+  margin: 10px;
+  border-radius: 2px;
+  padding-top: 20px;
+
+  width: inherit;
+  font-size: 1.4rem;
+  background: transparent;
+   -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 5px 0 rgba(0, 0, 0, 0);
+   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0);
+}
+
+
+.toolbar-title-md {
+  font-family: "DINNextLTArabic" !important;
+  font-size: xx-large;
+  font-weight: 800;
+  color: #ffffff;
+  padding-top: 10vw;
+  text-align: -webkit-center;
+}
+
+.toolbar-title-ios {
+  font-family: "DINNextLTArabic" !important;
+  font-size: xx-large;
+  font-weight: 800;
+  color: #ffffff;
+  padding-top: 10vw;
+  text-align: -webkit-center;
+}
+
+
+
+
+    .closeButton{
+      margin-top: 5%;
+      background-color: transparent;  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);     font-size: 3rem;
+
+
+    }
+    .popover1{
+        background: url("../assets/imgs/popover1.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+    .popover2{
+        background: url("../assets/imgs/popover2.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+    .popover3{
+        background: url("../assets/imgs/popover3.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+
+
+
+    .classmodal
+    {
+       background:#4d1cce;
+
+        left: 5%;
+
+      border-radius:30px;
+        position: absolute;
+        display: block;
+        width: 90%;
+        height: 110vw;
+        contain: strict;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    ion-card img {
+      display: block;
+    width: 80%;
+    padding: 10vw;
+    margin: auto;
+  }
+
+}

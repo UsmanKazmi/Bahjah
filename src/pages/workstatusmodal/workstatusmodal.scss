@@ -1,0 +1,81 @@
+page-workstatusmodal {
+
+    .label-md {
+        margin: -10px 0px 20px 0px;
+    }
+    .label-ios {
+        margin: -10px 0px 20px 0px;
+    }
+    .bar-buttons-md[end] {
+        text-align: start;
+        -webkit-box-ordinal-group: 6;
+        -webkit-order: 5;
+        -ms-flex-order: 5;
+        order: 5;
+    }
+
+
+    .bar-buttons-ios[end] {
+      height: 10vw;
+      text-align: start;
+      -webkit-box-ordinal-group: 6;
+      -webkit-order: 5;
+      -ms-flex-order: 5;
+      order: 5;
+  }
+    .closeButton{
+      margin-top: 5%;
+      background-color: transparent;  -webkit-box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);
+      box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0px rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0);     font-size: 3rem;
+
+
+    }
+    .popover1{
+        background: url("../assets/imgs/popover1.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+    .popover2{
+        background: url("../assets/imgs/popover2.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+    .popover3{
+        background: url("../assets/imgs/popover3.png") no-repeat center center ;
+        margin: auto;
+        display: block;
+        background-size: auto;
+        width: 20%;
+        height: 70px;
+
+
+    }
+
+
+
+    .classmodal
+    {
+       background:#4d1cce;
+
+        left: 5%;
+
+      border-radius:30px;
+        position: absolute;
+        display: block;
+        width: 90%;
+        height: 450px;
+        contain: strict;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

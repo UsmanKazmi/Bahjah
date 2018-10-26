@@ -1,0 +1,53 @@
+<!-- <ion-header no-shadow>
+  <ion-navbar>
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary"></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header> -->
+
+<ion-content >
+  <ion-slides style="direction: ltr;" pager="true" autoplay="5000" loop="false" speed="1000" (ionSlideDidChange)="isBeginning()">
+    <!-- <ion-slides pager="true"> -->
+    <ion-slide  class="splash1">
+      <h2 class="slide-title" style="margin-top: 35rem;font-weight: 800; -webkit-text-fill-color: #662aec;font-size: xx-large">{{ 'variousStores' | translate }}</h2>
+      <ion-label style=" font-weight:800;margin-top: 0.5rem;font-size: large">{{ 'varietyStoreText' | translate }}</ion-label>
+      <ion-label style=" font-weight:800;margin-top: 0.1rem;font-size: large">{{ 'attractiveCardsText' | translate }}</ion-label>
+
+    </ion-slide>
+
+
+
+
+
+
+
+    <ion-slide   class="splash2"  >
+        <h2 class="slide-title" style="margin-top: 35rem;font-weight: 800; -webkit-text-fill-color: #efec2e;font-size: xx-large">{{ 'CompetitiveText' | translate }}</h2>
+        <ion-label style="font-weight:600;margin-top: 0.5rem; color: white;font-size: large">{{ 'bahjahCardsText' | translate }}</ion-label>
+        <ion-label style=" font-weight:600;margin-top: 0.1rem; color: white ;font-size: large"> {{ 'CompetitiveText' | translate }} </ion-label>
+
+      </ion-slide>
+
+
+
+      <ion-slide class="splash3" >
+
+          <h2 class="slide-title" style="margin-top: 35rem;font-weight: 800; -webkit-text-fill-color: #f85763;font-size: xx-large">{{ 'instantDeliveryText' | translate }}</h2>
+          <ion-label style="font-weight:600;margin-top: 0.5rem; color: #efec2e ;font-size: large"> {{ 'buyYourselfText' | translate }} </ion-label>
+          <ion-label style=" font-weight:600;margin-top: 0.1rem; color: #efec2e; font-size: large">{{ 'whomYouText' | translate }}</ion-label>
+
+
+        </ion-slide>
+
+  </ion-slides>
+  <ion-footer>
+      <ion-navbar>
+        <ion-buttons tappable (click)="openLoginScreen()"  >
+          <button id="skipButton"  class="skipbutton" > {{ 'skip' | translate }}</button>
+    </ion-buttons>
+    </ion-navbar>
+    </ion-footer>
+</ion-content>
+
+

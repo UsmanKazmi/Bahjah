@@ -1,0 +1,110 @@
+<!--
+  Generated template for the AccountsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+
+  <ion-navbar>
+    <ion-title> {{ 'Edit Account' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-row class="loginRow">
+
+          <img  ion-image class="userImg" />
+
+
+
+    </ion-row>
+
+
+  <ion-grid style="padding: 6%">
+      <ion-row>
+
+
+
+      </ion-row>
+
+      <form [formGroup]="formgroup">
+          <ion-label>
+              {{ 'firstnameText' | translate }}            </ion-label>
+        <ion-item  style="    margin-bottom: 3%;">
+
+          <!-- <ion-list *ngFor="let items of dataList"> -->
+          <ion-input  type="text" [(ngModel)]="dataFromFirstName" formControlName="firstname" ></ion-input>
+          <ion-label class="inputLabel" *ngIf="firstname.hasError('required') && firstname.touched" align="end">{{ '*Required' | translate }} </ion-label>
+          <!-- <ion-label class="inputLabel" *ngIf="username.hasError('pattern') && username.touched"    align="end"> {{ 'DirectiveInvalidEmail' | translate }}</ion-label> -->
+
+        <!-- </ion-list> -->
+        </ion-item>
+        <ion-label>
+            {{ 'lastnameText' | translate }}             </ion-label>
+        <ion-item>
+          <ion-input   [(ngModel)]="dataFromLastName"   type="text" formControlName="lastname" > </ion-input>
+          <ion-label class="inputLabel" *ngIf="lastname.hasError('required') && lastname.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+
+        </ion-item>
+        <ion-label>
+            {{ 'phoneNumberText' | translate }}             </ion-label>
+        <ion-item>
+          <ion-input  [(ngModel)]="dataFromPhoneNumber"  type="tel"   placeholder="{{ 'Mobile' | translate }}"   formControlName="number" > </ion-input>
+          <ion-label class="inputLabel" *ngIf="number.hasError('required') && number.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+
+        </ion-item>
+        <ion-label>
+            {{ 'Email' | translate }}             </ion-label>
+        <ion-item>
+          <ion-input disabled="true" [(ngModel)]="dataFromEmail"  type="email" formControlName="email" > </ion-input>
+          <ion-label class="inputLabel" *ngIf="email.hasError('required') && email.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+
+        </ion-item>
+        <!-- <ion-label>
+            {{ 'Password' | translate }}             </ion-label>
+        <ion-item>
+          <ion-input [(ngModel)]="dataFromPassword"  type="password" formControlName="password" > </ion-input>
+          <ion-label class="inputLabel" *ngIf="password.hasError('required') && password.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+
+        </ion-item> -->
+
+
+      </form>
+
+      <ion-buttons>
+
+        <button align="center" class="button-changepassword" tappable (click)="openChangePassword()">
+          {{ 'Change Password' | translate }}    </button>
+      </ion-buttons>
+
+      <ion-buttons>
+
+          <button align="center" class="buttonlogin" tappable (click)="updateAccount()">
+            {{ 'update' | translate }}    </button>
+        </ion-buttons>
+
+    </ion-grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </ion-list>
+
+</ion-content>

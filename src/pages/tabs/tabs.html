@@ -1,0 +1,8 @@
+<ion-tabs  #myTabs  id="tabs">
+  <ion-tab [root]="tab1Root" (ionSelect)="transition($event)" tabIcon="feed" ></ion-tab>
+  <ion-tab [root]="tab2Root" (ionSelect)="transition($event)"  tabIcon="searchtwo"  tabsHideOnSubPages="true"></ion-tab>
+  <ion-tab [root]="tab3Root" (ionSelect)="transition($event)" tabIcon="redeem"></ion-tab>
+  <ion-tab [root]="tab4Root"  (ionSelect)="transition($event)" tabIcon="wallet"></ion-tab>
+  <ion-tab [root]="tab5Root" (ionSelect)="transition($event)"  tabIcon="profileicon"></ion-tab>
+
+</ion-tabs>

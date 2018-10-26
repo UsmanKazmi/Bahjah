@@ -1,0 +1,32 @@
+<!--
+  Generated template for the WorkstatusmodalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="content-modal-backdrop" tappable (click)="closeModal()">
+  </ion-content>
+<ion-content class="classmodal" padding  style="background:#FFD000">
+        <ion-list>
+          <button  class="filterButton" ion-item (click)="getProductsByFilter('Best Seller')">{{ 'Best Seller' | translate }}</button>
+
+
+
+
+          <button  class="filterButton"  ion-item (click)="getProductsByFilter('Best Price')">{{ 'Best Price' | translate }}</button>
+
+
+
+
+          <button   class="filterButton" ion-item (click)="getProductsByFilter('Most Preferred')">{{ 'Most Preferred' | translate }}</button>
+
+
+
+          <button  class="filterButton" ion-item (click)="getProductsByFilter('New')">{{ 'New' | translate }}</button>
+
+
+
+
+
+        </ion-list>
+      </ion-content>

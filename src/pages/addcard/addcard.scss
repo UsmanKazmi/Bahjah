@@ -1,0 +1,265 @@
+page-addcard {
+
+
+    .toolbar-background-md {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .toolbar-background-ios {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .topRow{
+      height: 150px;
+
+
+    }
+    .botRow{
+      margin-top: 10%;
+        width:100%;
+
+    }
+    .titleText{
+        text-align: center;
+        color: #4d1cce;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+    .simpleText{
+        text-align: center;
+
+        color: black;
+        font-weight: 700;
+        font-size: large;
+
+    }
+    .label-md {
+        margin: 1px 1px 1px 0;
+    }
+    .label-ios {
+      margin: 1px 1px 1px 0;
+  }
+    .smallText{
+        text-align: center;
+
+        color: black;
+        font-weight: 800;
+        font-size: small;
+    }
+    .cardImage{
+        height: 100px;
+        width: 100%;
+
+        background: url("../assets/imgs/card1.png") no-repeat center center ;
+        background-size: contain;
+    }
+    .col1{
+
+    }
+.col2{
+
+}
+.col3{}
+
+.toolbar-title-md {
+  font-family: "DINNextLTArabic" !important;
+  font-size: large;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: -webkit-center;
+  margin-right: 10vw !important;
+}
+.toolbar-title-ios {
+  font-family: "DINNextLTArabic" !important;
+  font-size: large;
+  font-weight: 800;
+  color: #ffffff;
+  text-align: -webkit-center;
+  // margin-right: 10vw !important;
+}
+.walletEmptyImg{
+  width: 100%;
+  margin: auto;
+
+  background: url("../assets/imgs/barcode@3x.png") no-repeat center center ;
+  background-size: contain;
+  height: 120px;
+  margin-top: 10%;
+
+}
+.buttonlogin{
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block !important;
+  color: white;
+  font-weight: 900;
+  /* border-radius: 40px; */
+ // height: 13vw;
+  font-size: medium;
+  font-weight: 900 !important;
+  color: #ffffff;
+  background-color: #4d1cce;
+  text-align: center;
+  width: 70vw;
+  /* padding-left: 10vw !important; */
+  /* padding-right: 10vw !important; */
+  /* padding-bottom: 6px; */
+  /* margin-top: 5%; */
+}
+// .label-md {
+//   margin: 1px 1px 1px 20px;
+// }
+// .label-ios {
+//   margin: 1px 1px 1px 20px;
+// }
+
+
+.barcode-scan{
+
+  background: url(../assets/imgs/barcode_scan.png) no-repeat center center !important;
+  display: block;
+  width: 15%;
+  /* height: 10vw; */
+  background-size: contain;
+  position: absolute !important;
+  margin: auto;
+  padding: 18px;
+  margin-top: -15px;
+}
+
+
+.barcode-enter{
+  background: url(../assets/imgs/barcode_enter.png) no-repeat center center !important;
+  display: block;
+  width: 15%;
+  /* height: 10vw; */
+  background-size: contain;
+  position: absolute;
+  margin: auto;
+  padding: 18px;
+  margin-top: -15px;
+}
+.width-100{
+
+  width:100%;
+  margin-top: 20vw !important;
+
+}
+.bar-buttons-md {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: auto;
+}
+
+.bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+  // background: url(../assets/imgs/back-white-iphone.png) no-repeat center center !important;
+  color: #424242;
+  background-color: transparent;
+  background-size: 15px;
+
+  height: 25px;
+  /* width: 6px; */
+
+}
+
+
+
+.bar-button-default-ios, .bar-button-clear-ios-default, .bar-button-ios-default {
+  // background: url(../assets/imgs/back-white-iphone.png) no-repeat center center !important;
+  color: #424242;
+  background-color: transparent;
+  background-size: 15px;
+  height: 25px;
+  /* width: 6px; */
+}
+.backbutton{
+  background: url("../assets/imgs/back-white-iphone.png") no-repeat center center ;
+
+
+}
+.bar-buttons-ios {
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  margin: auto;
+}
+.rowBottom{
+  width: 100%;
+  margin-top: 10%;
+  align-items: baseline;
+
+}
+.simpleText {
+  text-align: center;
+  color: black;
+  font-weight: 700;
+  font-size: large;
+  width: 100%;
+  border: none;
+}
+.back-button.show-back-button {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+
+.input{
+    border-bottom: 1px solid gray;
+    /* margin: 13px 100px; */
+    padding: 0;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+    display: flex !important;
+    font-size: large;
+
+}
+
+.row-text{
+  width: 100%
+}
+.row-textarea{
+  margin: auto;
+}
+.qr-text{
+    margin-top: 5vw !important;
+    text-align: center;
+    color: black;
+    font-weight: 900 !important;
+    font-size: x-large;
+    width: 100%;
+    border-bottom: 1px solid gray !important;
+}
+
+
+
+ion-app.cameraView,
+ion-app.cameraView ion-content,
+ion-app.cameraView .nav-decor,
+ion-header,
+ion-navbar,
+ion-title {
+    background: transparent none !important;
+}
+
+ion-app.cameraView {
+    background-size: 100% 100% !important;
+    /* To show image border */
+    background-image: url('https://user-images.githubusercontent.com/5133264/28922746-c4d26bc4-7831-11e7-873f-7190bf4b2aae.png') !important;
+}
+
+
+
+}
+
+

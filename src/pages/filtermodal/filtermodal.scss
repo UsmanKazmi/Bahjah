@@ -1,0 +1,38 @@
+page-filtermodal {
+
+
+    .classmodal
+    {
+       background:#FFD000;
+
+        left: 5%;
+
+      border-radius:0px;
+        position: absolute;
+        display: block;
+        width: 188px;
+       
+        contain: strict;
+       
+       top: 30vw;
+    }
+    .content-modal-backdrop {
+      background-color: transparent !important;
+      z-index: 0;
+    }
+    .filterButton{
+
+           color: #4d1cce;
+          background-color: #FFD000;
+
+          border-left: 0px solid #FFD000;
+          border-right: 0px solid #FFD000;
+          border-top: 0px solid #4d1cce;
+          border-bottom: 0px solid #4d1cce;
+          border-radius: 0px;
+          font-weight: 700;
+          text-align: left;
+          font-size: small;
+          height: 60px;
+    }
+}

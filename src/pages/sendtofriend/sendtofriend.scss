@@ -1,0 +1,140 @@
+page-sendtofriend {
+
+
+    .toolbar-background-md {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .toolbar-background-ios {
+        border-color: #4d1cce;
+        background: #4d1cce;
+    }
+    .topRow{
+        height:50px;
+
+
+    }
+    .botRow{
+        width:100%;
+        margin-top: 2vw;
+
+
+    }
+    .titleText{
+        text-align: center;
+        color: #4d1cce;
+        font-weight: 900;
+        font-size: xx-large;
+    }
+    .simpleText{
+        text-align: center;
+
+        color: gray;
+        font-weight: 700;
+        font-size: large;
+
+    }
+    .label-md {
+      margin: 13px 8px 1px -5px;
+    }
+    .smallText{
+        text-align: center;
+
+        color: black;
+        font-weight: 800;
+        font-size: large;
+    }
+    .cardImage{
+      height: 30vw;
+      width: 50vw;
+        background-size: contain;
+        margin: auto;
+    }
+    .col1{
+
+    }
+.col2{
+
+}
+.col3{}
+.imgRound1{
+
+    width: 100%;
+    height: 45px;
+    background: url("../assets/imgs/roundBlue.png") no-repeat left center ;
+    background-size: contain;
+
+}
+.imgRound2{
+
+    width: 100%;
+     height: 45px;
+
+
+    background: url("../assets/imgs/roundBlue.png") no-repeat center center ;
+    background-size: contain;
+
+}
+.imgRound3{
+
+    width: 100%;
+    height: 45px;
+
+    background: url("../assets/imgs/roundBlue.png") no-repeat right center ;
+    background-size: contain;
+
+}
+.circle1 {
+  background-color: #0d6cfd !important;
+  color: #9d44ff;
+  height: 30px;
+  width: 30px;
+   box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+  background-color: #0d6cfd !important;
+
+  border-radius: 20px;
+  float: left;
+
+  background: url("../assets/imgs/circle1.png") no-repeat center;
+}
+.circle2 {
+  background-color: #0d6cfd !important;
+  background: url("../assets/imgs/circle2.png") no-repeat center;
+  color: #9d44ff;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #0d6cfd;
+  box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+
+  border-radius: 20px;
+}
+.circle3 {
+  background-color: #0d6cfd !important;
+  color: #9d44ff;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #0d6cfd;
+  box-shadow: 0 8px 6px 1px rgba(0, 0, 0, 0.02), 0 3px 14px 2px rgba(0, 0, 0, 0.1), 3px 2px 5px -3px rgba(0, 0, 0, 0.02);
+
+  border-radius: 20px;
+  float: right;
+
+  background: url("../assets/imgs/circle3.png") no-repeat center;
+}
+// .toolbar-title-md {
+
+//   padding-right: 15vw !important;
+
+// }
+.line{
+  // border: 1px solid black;
+   width: 100%;
+   height: 1px;
+   color:black;
+   background-color: lightgray ;
+   margin-top: -5%;
+
+ }
+
+
+}

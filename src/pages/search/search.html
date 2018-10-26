@@ -1,0 +1,68 @@
+<!--
+<ion-header>
+
+
+
+
+
+  <ion-grid  style="padding:7%; height:20%">
+
+    <ion-row>
+
+
+      <ion-col col-4>
+        <ion-row style=" margin-top: 35%;
+        ">
+          <button style="width:5% ;height: 30px; width: 20px;background-color: transparent " tappable (click)="openGridmodal()" ion-button> <ion-img class="buttons-2"> </ion-img>
+          </button>
+          <button style="width:5% ;height: 30px; width: 20px;background-color: transparent" tappable (click)="openFiltermodal()" ion-button><ion-img class="buttons-3"></ion-img></button>
+      </ion-row>
+      </ion-col>
+    <ion-col col-8>
+        <ion-img class="MainLogo"> </ion-img>
+      </ion-col>
+
+
+    </ion-row>
+  </ion-grid>
+
+ [(ngModel)]="myInput"
+  [showCancelButton]="shouldShowCancel"
+  (ionInput)="onInput($event)"
+  (ionCancel)="onCancel($event)"
+
+
+
+</ion-header> -->
+<ion-content padding>
+
+  <ion-searchbar  placeholder="  {{ 'Search' | translate }}" style="margin-top: 7%;" (ionInput)="getItems($event)">
+  </ion-searchbar>
+
+  <ion-label  class="labelClass" >
+    {{ 'Categories' | translate }}</ion-label>
+
+
+
+  <ion-row [virtualScroll]="data"  style="height:23%;padding:3%">
+
+
+    <ion-col *virtualItem="let item" (click)="openProdWithCategory($event, item)" col-4 style="padding: 15px;">
+      <ion-avatar class="margin-bottom" >
+          <ion-img class="categoryImage loading-images" [src]="item.aImageUrl"></ion-img>
+      </ion-avatar>
+      <ion-card-title align="center">
+        {{ item.aName }} 
+      </ion-card-title>
+    </ion-col>
+
+
+
+  </ion-row>
+
+
+
+
+
+
+</ion-content>
