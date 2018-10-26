@@ -47,6 +47,7 @@ export class BuycarddetailsPage {
   GiftCardImageUrl: string = "";
   slideCase: any=[];
   slideCaseAID: any;
+  isOneSlide: boolean = false;
 
   constructor(public platform:Platform,private nativePageTransitions:NativePageTransitions,public translate: TranslateService,public loadingCtrl:LoadingController,public generalService:GeneralService,public navCtrl: NavController,public navParams: NavParams,public storage:Storage)
   {
@@ -223,15 +224,32 @@ export class BuycarddetailsPage {
 
   getSelectedTab(slide, aid){
     setTimeout(() => {
+
       this.slides.slideTo(0); // The 0 will avoid the transition of the slides to be shown
     }, 300)
     if (slide.aProductImagesModel.aProductPictureModel.length > 0) {
       this.slideCase = [];
       this.slideCase = slide.aProductImagesModel.aProductPictureModel
+      console.log("NOt ONE SLIDE")
+      this.slides.lockSwipes(false)
+
     } else {
+
+      this.slides.lockSwipes(false)
+
+      this.isOneSlide=true
+      console.log("ONLY ONE SLIDE")
       this.slideCase = [];
-      this.slideCase['0'] = slide.aProductImagesModel.aProductPictureModel
+      this.slideCase['0'] = slide.aProductImagesModel.aProductPictureModel;
+
+      if(this.isOneSlide==true){
+
+        this.slides.lockSwipes(true)
+
+
+      }
     }
+    this.isOneSlide=false;
 
     this.slideCaseAID = aid;
     this.selectedSegment= slide.aName;
@@ -252,8 +270,15 @@ export class BuycarddetailsPage {
       //To disable swiping on the last slide and first slide
   toCheckifLastSlide(){
 
+    if(this.isOneSlide==true){
 
-    debugger;
+      this.slides.lockSwipes(true)
+
+    }
+
+    else {
+
+    this.isOneSlide=false;
     this.storage.get('lang').then((value) => {
 
       // this.slides.lockSwipeToPrev(false);
@@ -269,7 +294,6 @@ export class BuycarddetailsPage {
         }
         else if(this.slides.isEnd()==true){
           this.slides.lockSwipeToPrev(false);
-
           this.slides.lockSwipeToNext(true);
 
 
@@ -298,8 +322,10 @@ export class BuycarddetailsPage {
 
         }
       }
-    });
+    }
 
+    );
+  }
 }
 
 
