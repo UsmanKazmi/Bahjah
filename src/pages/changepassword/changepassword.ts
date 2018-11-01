@@ -47,8 +47,8 @@ export class ChangepasswordPage {
 
 
           this.formgroup = formbuilder.group({
-            oldPassword:      ['',[Validators.required,Validators.minLength(6)]],
-            password:        ['',[Validators.required,Validators.minLength(6)]],
+            oldPassword:      ['',[Validators.required,Validators.minLength(3)]],
+            password:        ['',[Validators.required,Validators.minLength(4)]],
             confirmPassword: ['']
 
 
@@ -67,7 +67,6 @@ export class ChangepasswordPage {
     }
 
     sendResetEmail(){
-      debugger;
 
 
    // Opening a Loader when pressing Button

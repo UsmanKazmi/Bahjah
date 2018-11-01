@@ -81,7 +81,6 @@ export class BuycardcheckoutPage {
 
     this.data = navParams.get("item");
     console.log("THE DATA IS",this.data)
-    debugger;
     if( this.data.GiftCardImageUrl!=null){
       this.data.GiftCardImageUrl = this.data.GiftCardImageUrl.currentSrc;
 

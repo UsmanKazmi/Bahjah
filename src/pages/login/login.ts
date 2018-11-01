@@ -54,7 +54,6 @@ export class LoginPage {
     //     duration: 333500
     // });
     // toast2.present(toast2);
-    debugger;
 
 
 

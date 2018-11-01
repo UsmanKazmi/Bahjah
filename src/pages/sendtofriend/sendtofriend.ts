@@ -1,3 +1,4 @@
+import { HomePage } from './../home/home';
 import { BuycardcheckoutPage } from './../buycardcheckout/buycardcheckout';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -27,6 +28,10 @@ export class SendtofriendPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SendtofriendPage');
+  }
+  openHomePage(){
+    this.navCtrl.getByIndex(0);
+    this.navCtrl.parent.select(0);
   }
 
 }

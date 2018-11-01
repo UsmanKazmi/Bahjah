@@ -15,6 +15,11 @@ page-editaccount {
     .loginRow {
       padding: 20px;
     }
+    .validation-end{
+      width: 100%;
+      max-width: -webkit-fill-available;
+      text-align: end;
+    }
 
     .loginEmail {
       font-size: 700;

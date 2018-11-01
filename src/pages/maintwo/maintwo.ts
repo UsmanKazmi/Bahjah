@@ -146,7 +146,6 @@ export class MaintwoPage {
       content: MyApp.loadingText
     });
     loader.present();
-    debugger;
     this.generalService.webService(request,method).then(
       response => {
         loader.dismissAll();

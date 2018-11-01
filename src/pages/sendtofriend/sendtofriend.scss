@@ -20,6 +20,43 @@ page-sendtofriend {
 
 
     }
+    .button-changepassword{
+      margin-bottom:9%;
+
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block !important;
+    color: white;
+    border-radius: 40px;
+    height: 40px;
+    width: 50%;
+    font-size: initial; font-weight: 500; color: #ffffff;
+    background-color: #4f14d8;
+    // padding: 6px;
+    text-align: center;
+    padding-bottom: 6px;
+    margin-top: 5%;
+
+    }
+    .bar-buttons-md {
+      -webkit-box-ordinal-group: 5;
+      -webkit-order: 4;
+      -ms-flex-order: 4;
+      order: 4;
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+      width: -webkit-fill-available;
+    }
+  .bar-buttons-ios {
+    -webkit-box-ordinal-group: 5;
+    -webkit-order: 4;
+    -ms-flex-order: 4;
+    order: 4;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    width: -webkit-fill-available;
+}
     .titleText{
         text-align: center;
         color: #4d1cce;

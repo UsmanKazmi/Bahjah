@@ -160,7 +160,7 @@ export class HomePage {
          HomePage.dataFromLastName = this.dataList.aLastName;
          this.LastName = HomePage.dataFromLastName;
 
-         HomePage.dataFromPhoneNumber = "";
+         HomePage.dataFromPhoneNumber = this.dataList.aPhone;
          this.PhoneNumber = HomePage.dataFromPhoneNumber;
 
          HomePage.dataFromEmail = this.dataList.aEmail;
@@ -186,7 +186,7 @@ export class HomePage {
           HomePage.StateProvinceId = this.aAddresses.aAddress.aStateProvinceId;
           HomePage.StateProvinceName = this.aAddresses.aAddress.aStateProvinceId == 0 ? "Saudi Arabia" :  this.aAddresses.aAddress.aStateProvinceName;
           HomePage.ZipCode = this.aAddresses.aAddress.aZipPostalCode;
-          HomePage.dataFromPhoneNumber = this.aAddresses.aAddress.aPhoneNumber;
+
           this.PhoneNumber = HomePage.dataFromPhoneNumber;
          }
 
@@ -390,7 +390,6 @@ getProductsByFilter(filters){
         this.dataList = JSON.parse(this.dataList._body);
         //  this.dataList = this.dataList.aDashboard;
         console.log(this.dataList);
-        debugger;
 
 
 

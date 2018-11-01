@@ -129,6 +129,8 @@ export class EditaccountPage {
 
   // Request for Update Button
   updateAccount(){
+
+
     HomePage.dataFromPhoneNumber = this.formgroup.value.number;
 
     console.log("Email is",this.dataFromEmail );

@@ -147,9 +147,9 @@
 
 
 
-        <ion-row (click)="openNavigation(item.aAddress1)" style=" border-bottom:1px solid   #f6f6f6; font-size:larger; font-weight: 700;">
-          <ion-label  class="location-address-label"> {{item.aAddress1}}</ion-label>
-          <ion-label  class="location-phone-label" >{{item.aPhoneNumber}}</ion-label>
+        <ion-row  style=" border-bottom:1px solid   #f6f6f6; font-size:larger; font-weight: 700;">
+          <ion-label (click)="openNavigation(item.aAddress1)"  class="location-address-label"> {{item.aAddress1}}</ion-label>
+          <ion-label (click)="openDialPad(item.aPhoneNumber)" class="location-phone-label" >{{item.aPhoneNumber}}</ion-label>
           <ion-label  class="location-country-label" >{{item.aCity}} | {{item.aCountryName}}</ion-label>
         </ion-row>
 <!--

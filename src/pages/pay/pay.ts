@@ -254,14 +254,14 @@ export class PayPage {
 
     .then(result =>
     {
-      
+
       this.responseFromPayTabPlugin = result;
       // console.log(this.responseFromPayTabPlugin)
       // this.splitCodes = this.responseFromPayTabPlugin.split(/, |"/)
 
 
       // this.responseCode = this.splitCodes[7];
-      
+
 
       // this.transactionId = this.splitCodes[3];
 
@@ -291,7 +291,7 @@ export class PayPage {
       loader.dismiss();
 
       console.log(" error result is" , err)
-      debugger;
+
 
         let alert = this.alertCtrl.create({
           title:MyApp.errorText,
@@ -526,7 +526,6 @@ export class PayPage {
     let loader = this.loader.create({
       content: MyApp.loadingDataText
     });
-    debugger;
     loader.present();
 
     this.method = "AddNewAddress";

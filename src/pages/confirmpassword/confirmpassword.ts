@@ -62,7 +62,6 @@ export class ConfirmpasswordPage {
   }
 
   sendResetEmail(){
-    debugger;
 
 
  // Opening a Loader when pressing Button

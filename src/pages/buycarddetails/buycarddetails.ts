@@ -166,7 +166,6 @@ export class BuycarddetailsPage {
 
   private changeSegment(event, value) {
     // this.categories = value;
-    // debugger;
     // this.selectedSegment=this.dataList.aProductPictures[0].aName;
     // this.categories = this.selectedSegment;
 

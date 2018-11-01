@@ -126,6 +126,7 @@
     <allow-navigation href="http://192.168.8.101:8100" />
     <plugin name="cordova-plugin-paytab" spec="https://github.com/Kunwar-Adeel/Ionic-Paytabs" />
     <plugin name="cordova-plugin-velda-devicefeedback" spec="0.0.2" />
+    <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.0.0" />
 </widget>

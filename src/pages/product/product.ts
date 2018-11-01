@@ -50,7 +50,6 @@ export class ProductPage {
 
      ProductPage.categoryId = this.value.aId;
 
-    debugger;
       // Opening a Loader for Loding data
 
     this.storage.get('usr').then((usr) => {

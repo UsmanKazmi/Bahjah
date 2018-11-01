@@ -40,7 +40,7 @@
 
           <!-- <ion-list *ngFor="let items of dataList"> -->
           <ion-input  type="text" [(ngModel)]="dataFromFirstName" formControlName="firstname" ></ion-input>
-          <ion-label class="inputLabel" *ngIf="firstname.hasError('required') && firstname.touched" align="end">{{ '*Required' | translate }} </ion-label>
+          <ion-label class="inputLabel validation-end" *ngIf="firstname.hasError('required') && firstname.touched" align="end">{{ '*Required' | translate }} </ion-label>
           <!-- <ion-label class="inputLabel" *ngIf="username.hasError('pattern') && username.touched"    align="end"> {{ 'DirectiveInvalidEmail' | translate }}</ion-label> -->
 
         <!-- </ion-list> -->
@@ -49,14 +49,14 @@
             {{ 'lastnameText' | translate }}             </ion-label>
         <ion-item>
           <ion-input   [(ngModel)]="dataFromLastName"   type="text" formControlName="lastname" > </ion-input>
-          <ion-label class="inputLabel" *ngIf="lastname.hasError('required') && lastname.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+          <ion-label class="inputLabel validation-end" *ngIf="lastname.hasError('required') && lastname.touched" align="right" >{{ '*Required' | translate }}</ion-label>
 
         </ion-item>
         <ion-label>
             {{ 'phoneNumberText' | translate }}             </ion-label>
         <ion-item>
           <ion-input  [(ngModel)]="dataFromPhoneNumber"  type="tel"   placeholder="{{ 'Mobile' | translate }}"   formControlName="number" > </ion-input>
-          <ion-label class="inputLabel" *ngIf="number.hasError('required') && number.touched" align="right" >{{ '*Required' | translate }}</ion-label>
+          <ion-label class="inputLabel validation-end" *ngIf="number.hasError('required') && number.touched" align="right" >{{ '*Required' | translate }}</ion-label>
 
         </ion-item>
         <ion-label>
