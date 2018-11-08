@@ -65,7 +65,7 @@ export class EditaccountPage {
   DOB: any= "";
   gender: any= "";
   custId: any= "";
-  dataFromGetCustomerInfo: any;
+  dataFromGetCustomerInfo: any= [];
 
   constructor(
     public formbuilder: FormBuilder,
@@ -208,6 +208,7 @@ export class EditaccountPage {
           this.dataFromGetCustomerInfo = response;
           console.log(response);
           loader.dismiss();
+          debugger;
 
           if (this.dataFromGetCustomerInfo.statusText == "OK") {
 
@@ -216,7 +217,23 @@ export class EditaccountPage {
 
               this.dataFromFirstName = this.dataFromGetCustomerInfo.aFirstName;
               this.dataFromLastName = this.dataFromGetCustomerInfo.aLastName;
-              this.dataFromPhoneNumber = this.dataFromGetCustomerInfo.aPhone;
+              console.log('asdasd',this.dataFromGetCustomerInfo.aPhone)
+
+
+              if(this.dataFromGetCustomerInfo.aPhone[0]!=null && this.dataFromGetCustomerInfo.aPhone[0]==" "){
+                this.dataFromPhoneNumber =' ';
+               }
+               else{
+                this.dataFromPhoneNumber = this.dataFromGetCustomerInfo.aPhone;
+               }
+
+
+
+
+
+
+
+
               this.dataFromEmail = this.dataFromGetCustomerInfo.aEmail;
               this.dataFromPassword = HomePage.dataFromPassword;
               // this.dataFromCustId = this.dataFromGetCustomerInfo.dataFromCustId;

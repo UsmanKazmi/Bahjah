@@ -160,8 +160,25 @@ export class HomePage {
          HomePage.dataFromLastName = this.dataList.aLastName;
          this.LastName = HomePage.dataFromLastName;
 
-         HomePage.dataFromPhoneNumber = this.dataList.aPhone;
+
+
+
+        debugger;
+         console.log("aPhone",this.dataList.aPhone[0]);
+
+         if(this.dataList.aPhone[0]!=null && this.dataList.aPhone[0]==" "){
+          HomePage.dataFromPhoneNumber= ""
+          console.log(HomePage.dataFromPhoneNumber)
+         }
+         else{
+          HomePage.dataFromPhoneNumber = this.dataList.aPhone;
+
+         }
          this.PhoneNumber = HomePage.dataFromPhoneNumber;
+
+
+
+
 
          HomePage.dataFromEmail = this.dataList.aEmail;
          this.Email = HomePage.dataFromEmail;

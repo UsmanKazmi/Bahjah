@@ -71,6 +71,7 @@ export class MyApp {
   static signInAgain: any;
   static successfullyUpdatedText: any;
   static finishingOrderText: any;
+  static emailNotFound: any;
 
   constructor(public generalService:GeneralService, public toastCtrl: ToastController ,public alertCtrl:AlertController,private platform: Platform,private translate: TranslateService,  statusBar: StatusBar, splashScreen: SplashScreen, storage: Storage, private deeplinks:Deeplinks) {
     platform.ready().then(() => {
@@ -293,6 +294,14 @@ this.translate.get('signInAgain').subscribe(
   value => {
     // value is our translated string
      MyApp.signInAgain = value;
+  }
+
+
+)
+this.translate.get('emailNotFound').subscribe(
+  value => {
+    // value is our translated string
+     MyApp.emailNotFound = value;
   }
 
 

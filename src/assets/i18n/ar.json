@@ -199,7 +199,9 @@
 "signInAgain":"الرجاء تسجيل الدخول للمتابعة !نجاح...",
 "successfullyUpdatedText":"تم التحديث بنجاح",
 "finishingOrderText":"ترتيب الانتهاء ...",
-"NewAddressText":"العنوان الجديد"
+"NewAddressText":"العنوان الجديد",
+"emailNotFound":"البريد الإلكتروني غير موجود"
+
 
 
 

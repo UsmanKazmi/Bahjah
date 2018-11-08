@@ -91,7 +91,7 @@ export class ResetpasswordPage {
          loader.dismiss(); // disabling Loader as soon as the response is fed
 
          // checking for success or failure
-
+          debugger;
          //FOR CUSTOMER DOESNT EXIST ERROR
          if (this.dataList.aStatus == "Success") {
 
@@ -109,13 +109,23 @@ export class ResetpasswordPage {
          }
 
          //FOR wrongPasswordText ERROR
-         if (this.dataList.aStatus == "Error") {
+
+         if ( this.dataList.aStatus == "Error" && this.dataList.aMessage == "Email not found.") {
+          let alert = this.alertCtrl.create({
+            title:MyApp.emailNotFound,
+            buttons:[MyApp.okayText]
+          });
+          alert.present();
+         }
+
+         else {
           let alert = this.alertCtrl.create({
             title:MyApp.errorText,
             buttons:[MyApp.okayText]
           });
           alert.present();
          }
+
 
 
 

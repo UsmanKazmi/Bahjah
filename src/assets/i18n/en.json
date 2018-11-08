@@ -198,7 +198,8 @@
 "signInAgain":"Success! Please login to again to continue...",
 "successfullyUpdatedText":"Successfully Updated!",
 "finishingOrderText":"Finishing order...",
-"NewAddressText":"New Address"
+"NewAddressText":"New Address",
+"emailNotFound":"Error: Email not found! "
 
 
 
