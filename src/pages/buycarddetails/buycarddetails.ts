@@ -40,7 +40,6 @@ export class BuycarddetailsPage {
   pictureArray: any= [];
   pictureArray2: any= [];
   @ViewChild(Navbar) navBar: Navbar;
-
   aProductPictureModel: any= [];
   imageFromArray2: any=[];
   activeSlide:number;
@@ -131,7 +130,9 @@ export class BuycarddetailsPage {
 
   onNextButton(){
     this.activeSlide=this.slides.getActiveIndex();
-    let grabImage = document.getElementById('GiftCardImageUrl'+this.activeSlide);
+    let grabImage = document.getElementById('GiftCardImageUrl'+this.activeSlide) ;
+
+    debugger;
     console.log('image src',grabImage)
     this.detailPageData.GiftCardImageUrl = grabImage;
 

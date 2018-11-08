@@ -129,7 +129,17 @@ export class EditaccountPage {
 
   // Request for Update Button
   updateAccount(){
+    debugger;
+    if(this.formgroup.value.number==""){
 
+      let alert = this.alertCtrl.create({
+        title: MyApp.invalidPhone,
+        buttons:[MyApp.okayText]
+      });
+      alert.present();
+
+    }
+    else{
 
     HomePage.dataFromPhoneNumber = this.formgroup.value.number;
 
@@ -176,7 +186,7 @@ export class EditaccountPage {
 
 
 
-
+  }
 
 
   }

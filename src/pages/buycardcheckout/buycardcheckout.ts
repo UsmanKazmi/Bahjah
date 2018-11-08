@@ -57,7 +57,7 @@ export class BuycardcheckoutPage {
   productImageFromUrl: any=[];
   constructor( private nativePageTransitions:NativePageTransitions,public navCtrl: NavController, private storage:Storage, public navParams: NavParams, private loadingCtrl: LoadingController, private toast: ToastController, private generalService: GeneralService, public alertCtrl:AlertController) {
     this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
-
+    debugger;
 
     //FOR VALIDATING THE FORM
     // this.formgroup = formbuilder.group({
@@ -82,6 +82,9 @@ export class BuycardcheckoutPage {
     this.data = navParams.get("item");
     console.log("THE DATA IS",this.data)
     if( this.data.GiftCardImageUrl!=null){
+
+      //this is due to the fact that currentSrc ios not directly accessible through DOM
+
       this.data.GiftCardImageUrl = this.data.GiftCardImageUrl.currentSrc;
 
     }

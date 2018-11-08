@@ -79,9 +79,10 @@ export class PayPage {
   transactionId: any;
   result: any;
   splitCodes: any;
+  giftcardURL:any;
 
   constructor(public paytab:PaytabProvider,public translate:TranslateService,private themeableBrowser:ThemeableBrowser,private networkInterface: NetworkInterface,public generalService: GeneralService,private storage: Storage,public loader:LoadingController,public alertCtrl:AlertController,public navCtrl: NavController,public platform: Platform, public navParams: NavParams,private iab: InAppBrowser) {
-
+    debugger;
 
     if(this.translate.store.currentLang==='ar'){
       this.currentLang = "Arabic"
@@ -93,7 +94,7 @@ export class PayPage {
 
     this.dataFromBuyCardConfirmPage = navParams.get("item");
     console.log("dataFromBuyCardConfirmPage",this.dataFromBuyCardConfirmPage);
-
+    this.giftcardURL=this.dataFromBuyCardConfirmPage.GiftCardImageUrl;
     this.setAddressData();
 
     this.networkInterface.getWiFiIPAddress()
@@ -274,7 +275,7 @@ export class PayPage {
 
 
       if(this.responseCode=="100"){
-        this.finishOrderService(this.username,this.password,PayPage.paymentAddressId);
+        this.finishOrderService(this.username,this.password,PayPage.paymentAddressId,this.giftcardURL);
 
       }
       else{
@@ -452,9 +453,9 @@ export class PayPage {
   }
 
 
-  finishOrderService(email,password,paId){
+  finishOrderService(email,password,paId,giftcardURL){
     this.method = "FinishOrder";
-    this.request = '<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"> <Body> <FinishOrder xmlns="http://tempuri.org/"> <paymentMethodName>Payments.Manual</paymentMethodName> <shippingoption></shippingoption> <billingAddressId>'+paId+'</billingAddressId> <shippingAddressId>'+paId+'</shippingAddressId> <pickUpInStore>1</pickUpInStore> <pickupPointValue></pickupPointValue> <usernameOrEmail>'+email+'</usernameOrEmail> <userPassword>'+password+'</userPassword> <creditCardType>Master card</creditCardType> <creditCardName>'+this.firstname+' '+this.lastname+'</creditCardName> <creditCardNumber>0000000000000000</creditCardNumber> <creditCardExpireMonth>2</creditCardExpireMonth> <creditCardExpireYear>2019</creditCardExpireYear> <creditCardCvv2>000</creditCardCvv2> </FinishOrder> </Body> </Envelope>';
+    this.request = '<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/"> <Body> <FinishOrder xmlns="http://tempuri.org/"> <paymentMethodName>Payments.Manual</paymentMethodName> <shippingoption></shippingoption> <billingAddressId>'+paId+'</billingAddressId> <shippingAddressId>'+paId+'</shippingAddressId> <pickUpInStore>1</pickUpInStore> <pickupPointValue></pickupPointValue> <usernameOrEmail>'+email+'</usernameOrEmail> <userPassword>'+password+'</userPassword> <creditCardType>Master card</creditCardType> <creditCardName>'+this.firstname+' '+this.lastname+'</creditCardName> <creditCardNumber>0000000000000000</creditCardNumber> <creditCardExpireMonth>2</creditCardExpireMonth> <creditCardExpireYear>2019</creditCardExpireYear> <creditCardCvv2>000</creditCardCvv2> <ocassionImageURL>'+giftcardURL+'</ocassionImageURL> </FinishOrder> </Body> </Envelope>';
 
     let loader = this.loader.create({
       content: MyApp.finishingOrderText
