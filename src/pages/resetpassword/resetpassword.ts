@@ -110,7 +110,7 @@ export class ResetpasswordPage {
 
          //FOR wrongPasswordText ERROR
 
-         if ( this.dataList.aStatus == "Error" && this.dataList.aMessage == "Email not found.") {
+          else if ( this.dataList.aStatus == "Error" && this.dataList.aMessage == "Email not found.") {
           let alert = this.alertCtrl.create({
             title:MyApp.emailNotFound,
             buttons:[MyApp.okayText]
@@ -118,7 +118,7 @@ export class ResetpasswordPage {
           alert.present();
          }
 
-         else {
+         else{
           let alert = this.alertCtrl.create({
             title:MyApp.errorText,
             buttons:[MyApp.okayText]
