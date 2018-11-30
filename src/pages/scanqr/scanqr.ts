@@ -68,9 +68,9 @@ export class ScanqrPage {
             this.qrScanner.destroy(); // hide camera preview
             scanSub.unsubscribe(); // stop scanning
 
-            window.document
-              .querySelector("body")
-              .classList.remove("transparent-body");
+            // window.document.querySelector("ion-app").classList.remove("transparent-body");
+            window.document.querySelector("body").classList.add("back-button-body");
+
             // let toast = this.toastCtrl.create({
 
             //   //assigning the success message to toast only
@@ -79,9 +79,9 @@ export class ScanqrPage {
             // });
             // toast.present(toast);
           });
-          window.document
-            .querySelector("body")
-            .classList.add("transparent-body");
+          // window.document.querySelector("ion-app").classList.add("transparent-body")
+          window.document.querySelector("body").classList.add("back-button-body");
+
           this.isCameraOpen = true;
 
           this.qrScanner.show();
@@ -155,9 +155,14 @@ export class ScanqrPage {
     );
   }
   ionViewDidLeave(){
+    // window.document
+    // .querySelector("ion-app")
+    // .classList.remove("transparent-body");
+
     window.document
     .querySelector("body")
-    .classList.remove("transparent-body");
+    .classList.remove("back-button-body");
+
   this.isCameraOpen = true;
   }
 

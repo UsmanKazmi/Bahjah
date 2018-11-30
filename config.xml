@@ -3,7 +3,7 @@
     <name>BAHJAH</name>
     <description>An awesome Ionic/Cordova app.</description>
     <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.10.157:8100" />
     <access origin="*" />
     <allow-navigation href="*" />
     <allow-intent href="http://*/*" />
@@ -127,6 +127,7 @@
     <plugin name="cordova-plugin-paytab" spec="https://github.com/Kunwar-Adeel/Ionic-Paytabs" />
     <plugin name="cordova-plugin-velda-devicefeedback" spec="0.0.2" />
     <plugin name="mx.ferreyra.callnumber" spec="~0.0.2" />
+    <allow-navigation href="http://192.168.10.157:8100" sessionid="f2bd69ad" />
     <engine name="ios" spec="4.5.5" />
     <engine name="android" spec="7.0.0" />
 </widget>
