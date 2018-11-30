@@ -14,7 +14,6 @@ import { Component, ComponentFactoryResolver, ViewChild,ChangeDetectorRef } from
 import { IonicPage, NavController, NavParams,Platform } from "ionic-angular";
 import { TranslateService } from "../../../node_modules/@ngx-translate/core";
 import { LaunchNavigator, LaunchNavigatorOptions } from '../../../node_modules/@ionic-native/launch-navigator';
-import { CallNumber } from '@ionic-native/call-number';
 
 
 /**
@@ -85,7 +84,7 @@ export class SelectedcardPage {
     private socialSharing: SocialSharing,
     public platform:Platform,
     public alertCtrl:AlertController,
-    private callNumber: CallNumber
+    // private callNumber: CallNumber
   ) {
 
     // translate.get('loadingDataText').subscribe(
@@ -552,9 +551,9 @@ this.cf.detectChanges();
 }
 openDialPad(aPhoneNumber){
   console.log(aPhoneNumber)
-  this.callNumber.callNumber(aPhoneNumber, true)
-  .then(res => console.log('Launched dialer!', res))
-  .catch(err => console.log('Error launching dialer', err));
+  // this.callNumber.callNumber(aPhoneNumber, true)
+  // .then(res => console.log('Launched dialer!', res))
+  // .catch(err => console.log('Error launching dialer', err));
 }
 
 

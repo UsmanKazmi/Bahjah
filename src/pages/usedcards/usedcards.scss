@@ -159,7 +159,7 @@ page-usedcards {
     //padding-top: 5%;
   }
   .toolbar-title-ios {
-  padding-top:3vw  !important;
+  // padding-top:3vw  !important;
   }
   .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
     color: white !important;
@@ -328,6 +328,8 @@ page-usedcards {
       font-weight: 900;
   }
   .cardbot{
+    font-weight: 900;
+
     // left: 8vw;
     margin:  0px !important;
     font-size: medium !important;

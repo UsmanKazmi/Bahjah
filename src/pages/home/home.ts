@@ -163,7 +163,7 @@ export class HomePage {
 
 
 
-        debugger;
+        // debugger;
          console.log("aPhone",this.dataList.aPhone[0]);
 
          if(this.dataList.aPhone[0]!=null && this.dataList.aPhone[0]==" "){

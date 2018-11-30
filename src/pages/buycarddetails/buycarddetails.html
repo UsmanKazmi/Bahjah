@@ -93,8 +93,8 @@
       </ion-segment>
     </ion-row>
 
-    <ion-row >
-      <div style="width:100% !important;"  [ngSwitch]="categories" >
+    <ion-row style="display: flex;flex-flow: column; height: -webkit-fill-available;" >
+      <div style="width:100% !important; height: -webkit-fill-available;"  [ngSwitch]="categories" >
         <ion-list *ngSwitchCase="this.categories">
 
           <ion-row class="sliderRow">

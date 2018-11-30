@@ -45,7 +45,7 @@ export class GridmodalPage {
     this.viewCtrl.dismiss({animate: false});
   }
   closeModal(){
-    this.viewCtrl.dismiss({animate: false});
+    this.navCtrl.pop({animate: false});
   }
   openProdWithCategory(event ,items){
 

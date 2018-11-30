@@ -47,7 +47,7 @@ padding: 0px !important;
 
 // to make the center slide with a border
 .swiper-slide-active{
-  width: 150px !important;
+  width: 170px !important;
 
   // border: 0.7vw solid #4f14d8;
   // border-top: 1vw solid #4f14d8;
@@ -63,23 +63,27 @@ padding: 0px !important;
 
 .swiper-slide-active::before{
   content: "";
-    z-index: 100;
-    height: 25px;
-    position: absolute;
-    top: 40px;
-    left: 10px;
-    width: 30px;
+  z-index: 100;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
   background: url(../assets/imgs/card_selected.png) no-repeat top left !important;
 
 }
 
 
 .swiper-slide-next{
+  width: 150px !important;
+
   // width: 100px !important;
   // border: 0.2vw solid gray;
   // transform: translate3d(0px, 0px, -26px) rotateX(0deg) rotateY(8deg) !important;
 }
 .swiper-slide-prev{
+  width: 150px !important;
+
   // width: 100px !important;
 
   // border: 0.2vw solid gray;
@@ -136,6 +140,9 @@ ion-img {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHBAMAAADzDtBxAAAAD1BMV…h/TXEAAAAaSURBVAjXYxCEAgY4UIICBmMogMsgFLtAAQCNSwXZKOdPxgAAAABJRU5ErkJggg==);
     background-repeat: repeat-x;
     content: "";
+
+
+    
 }
 
 .cardName{
@@ -192,12 +199,21 @@ ion-img {
     width:100%;
     height: 100%;
     padding-bottom: 20px;
-    margin-top: calc(95% - 300px);
+    // margin-top: calc(95% - 300px);
 
   }
+  .list-ios {
+    /* margin: 0px 0 16px; */
+    height: -webkit-fill-available;
+}
+.list-md {
+  /* margin: 0px 0 16px; */
+  height: -webkit-fill-available;
+}
 
 .sliderRow{
-    height: 300px;
+    height: -webkit-fill-available;
+    padding-bottom: 23%;
 
     align-items: center !important;
     justify-content: center !important;
@@ -213,10 +229,14 @@ ion-img {
   font-size: 14px;
   color: #662aec;
   // font-weight: 600;
+  font-weight: bold;
+
   // font-family: monospace;
 
 }
 .segment-md .segment-button {
+  font-weight: bold;
+
   // border-color: black;
   // font-weight: 600;
   // font-family: monospace;
@@ -229,9 +249,11 @@ ion-img {
   // border-color: black;
   opacity: 1;
   font-size: 11px;
+  font-weight: bold;
+
   color: #662aec;
   // font-weight: 600;
-  font-family: monospace;
+  // font-family: monospace;
   background-color: #fff;
   // border-bottom: 1px solid #662aec;
   // border-top: 0px !important;
@@ -245,9 +267,11 @@ ion-img {
 
   // border-color: black;
   // font-weight: 600;
-  font-family: monospace;
+  // font-family: monospace;
   opacity: 1;
   font-size: 10px;
+  font-weight: bold;
+
   color: black;
   -webkit-box-flex: 1;
     -webkit-flex: 1;

@@ -31,7 +31,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from "@angular/http";
 import { NativePageTransitions } from '@ionic-native/native-page-transitions';
-import { CallNumber } from '@ionic-native/call-number';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -97,7 +96,7 @@ export function createTranslateLoader(http: HttpClient) {
   ],
   providers: [
 
-    InAppBrowser,SocialSharing,NetworkInterface,ThemeableBrowser,NativePageTransitions,LaunchNavigator,Deeplinks,CallNumber,
+    InAppBrowser,SocialSharing,NetworkInterface,ThemeableBrowser,NativePageTransitions,LaunchNavigator,Deeplinks,
     StatusBar,QRScanner,DeviceFeedback,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
