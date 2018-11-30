@@ -42,10 +42,10 @@ export class GridmodalPage {
 
 
   dismiss() {
-    this.viewCtrl.dismiss({animate: false});
+    this.viewCtrl.dismiss();
   }
   closeModal(){
-    this.viewCtrl.dismiss({animate: false});
+    this.viewCtrl.dismiss();
   }
   openProdWithCategory(event ,items){
 

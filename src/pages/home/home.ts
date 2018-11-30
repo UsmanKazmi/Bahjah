@@ -280,7 +280,7 @@ public openFiltermodal(){
             this.setFilterContent(filterData);
         }
       });
-      modalPageEn.present({animate: false});
+      modalPageEn.present();
     // }
 
 }
@@ -311,7 +311,7 @@ public openGridmodal(){
     modalPageEn.onDidDismiss(items => {
       this.navCtrl.push(ProductPage,{item:items});
     });
-    modalPageEn.present({animate: false});
+    modalPageEn.present();
   // }
 
 }
@@ -329,8 +329,7 @@ public ObjectIsEmpty(obj) {
   return true;
 }
 public openModal(){
-var modalPage = this.modalCtrl.create(WorkstatusmodalPage);
-modalPage.present({animate: false});
+var modalPage = this.modalCtrl.create(WorkstatusmodalPage); modalPage.present();
 }
 
 

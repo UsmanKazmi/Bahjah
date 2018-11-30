@@ -101,9 +101,8 @@ export class MyApp {
           //  alert(JSON.stringify(match));
 
 
-          let checkIndex =  match.$link.queryString.split(/=|&/);
-
-          if(checkIndex[0]=='https://bahjahcards.com/passwordrecovery/confirm?token' || checkIndex[0]=='token'){
+          let checkIndex =  match.$link.queryString.split(/=|&/);;
+          if(checkIndex[0]=='https://bahjahcards.com/passwordrecovery/confirm?token'){
             storage.get("usr").then((usr) => {
               storage.get("pwd").then((pwd) => {
                 if(usr || pwd){
@@ -148,7 +147,7 @@ export class MyApp {
           }
 
             //DeepLink check for opening AddCardSerialPage
-          else if (checkIndex[0]=='https://bahjahcards.com/bahjah?serial' || checkIndex[0]=='serial'){
+          else if (checkIndex[0]=='serial'){
 
             storage.get("usr").then((usr) => {
               storage.get("pwd").then((pwd) => {
