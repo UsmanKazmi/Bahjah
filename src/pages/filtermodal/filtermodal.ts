@@ -31,18 +31,18 @@ export class FiltermodalPage {
     this.viewCtrl.dismiss();
   }
   closeModal(){
-    this.navCtrl.pop();
+    this.navCtrl.pop({animate: false});
 
   }
   close() {
-    this.navCtrl.pop();
+    this.navCtrl.pop({animate: false});
   }
 
   closeModalFilters(filters) {
     this.viewCtrl.dismiss(filters);
   }
 
-  
+
 getProductsByFilter(filters){
 
   let loader = this.loadingCtrl.create({
