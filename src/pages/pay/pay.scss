@@ -263,17 +263,21 @@ padding-bottom: 7%;
   padding: 0px !important;
 }
 .inputLabel {
-  right: 30px !important;
+  // right: 30px !important; *
   background-color: transparent;
   color: red !important;
   text-align: end;
   font-size: small;
+  width: -webkit-fill-available !important;
   font-weight: 700;
-  padding-top: 12px;
+  max-width: webkit-fill-available !important;
+  padding: 10px;
 }
 .validation-end{
-  // width: 100%;
-  // max-width: -webkit-fill-available;
+  padding: 10px;
+
+  width: 100%;
+  max-width: -webkit-fill-available;
   text-align: end;
 }
 .action-sheet-md .action-sheet-group .button-inner {
@@ -286,10 +290,16 @@ padding-bottom: 7%;
 }
 .select-ios .select-icon {
   padding-left: 20px !important;
+  height: 30px;
 
   padding-right: 20px !important;
 }
+.select-ios{
+  padding: 0px 7px;
+
+}
 .select-md .select-icon {
+  height: 30px;
   padding-left: 20px !important;
 
   padding-right: 20px !important;
@@ -308,6 +318,44 @@ padding-bottom: 7%;
   overflow: visible;
 
 }
+.item-ios.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border: 0px solid #f53d3d !important;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0px 0px 0px 0px #f53d3d !important;
+  box-shadow: inset 0px 0px 0px 0px #f53d3d !important;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+  border-bottom-color: transparent !important;
+  -webkit-box-shadow: inset 0 0px 0 0 transparent !important;
+  box-shadow: inset 0 0px 0 0 transparent !important;
+
+
+}
+.item-input-has-focus, .input-has-focus{
+  border-bottom-color: transparent !important;
+  -webkit-box-shadow: inset 0 0px 0 0 transparent !important;
+  box-shadow: inset 0 0px 0 0 transparent !important;
+
+
+}
+.item-ios {
+
+  border-bottom: 0px !important;
+
+}
+.item-ios.item-block .item-inner {
+  padding-right: 8px;
+  padding-right: 8px;
+  border-bottom: 0px solid lightgray;
+}
+.item-text{
+  margin: 13px 20px 13px 10px !important;
+
+}
+.list-ios > .item-block:first-child {
+  border-top: 0px solid #c8c7cc !important;
+}
+
 
 
 }

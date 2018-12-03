@@ -42,55 +42,56 @@
 
             </ion-list>
 
-
-        <ion-row>
+            <ion-item>
           <ion-input [(ngModel)]="firstname"  maxlength="50" placeholder="{{'firstnameText' | translate}}">
 
           </ion-input>
           <ion-input [(ngModel)]="lastname" maxlength="50" placeholder="{{'lastnameText' | translate}}">
 
             </ion-input>
-        </ion-row>
+      </ion-item>
 
         <form  [formGroup]="formgroup">
 
-        <ion-row>
-            <ion-input  maxlength="10"   type="tel"  formControlName="validationPhone"  placeholder="{{'Mobile' | translate}}">
+          <ion-item>
+            <ion-input   maxlength="10"   type="tel"  formControlName="validationPhone"  placeholder="{{'Mobile' | translate}}">
 
             </ion-input>
             <ion-label class="inputLabel validation-end"  *ngIf="validationPhone.hasError('pattern') && validationPhone.touched" >{{ 'englishNumberReq' | translate }} </ion-label>
+          </ion-item>
 
-          </ion-row>
+          <ion-item>
 
-
-        <ion-row>
             <ion-input formControlName="validationEmail" maxlength="40" placeholder="{{'Email' | translate}}">
 
             </ion-input>
             <ion-label  class="inputLabel validation-end" *ngIf="validationEmail.hasError('pattern') && validationEmail.touched" >{{ '*invalidEmail' | translate }} </ion-label>
+          </ion-item>
 
-          </ion-row>
         </form>
 
 
 
 
+        <ion-item>
 
-          <ion-row>
             <ion-input [(ngModel)]="addressFromForm"  maxlength="40" placeholder="{{'Address' | translate}}">
 
             </ion-input>
-          </ion-row>
-          <ion-row>
+
+
+        </ion-item>
+
+
+        <ion-item>
 
             <ion-input  [(ngModel)]="country"  type="text" maxlength="40" placeholder="{{'country' | translate}}">
 
               </ion-input>
 
-      </ion-row>
+    </ion-item>
+    <ion-item>
 
-
-      <ion-row>
 
         <!-- <ion-input  [(ngModel)]="city"  type="text" maxlength="40" placeholder="{{'city' | translate}}">
 
@@ -109,8 +110,7 @@
 
           </ion-select>
 
-  </ion-row>
-
+</ion-item>
           <!-- <ion-row>
             <ion-col>
               <ion-input [(ngModel)]="city"  maxlength="24" placeholder="{{'city' | translate}}">

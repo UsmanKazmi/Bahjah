@@ -117,13 +117,13 @@ export class BuycardcheckoutPage {
 
 
   openConfirmPayment(){
-    // var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
+    var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
 
     // var reg = new RegExp(/^(\u0660\u0660\u0669\u0666\u0666\u0665|\u0669\u0666\u0666\u0665|\+\u0669\u0666\u0666\u0665|\u0660\u0665|\u0665)(\u0665|\u0660|\u0663|\u0666|\u0664|\u0669|\u0661|\u0668|\u0667)([\u0660-\u0669]{\u0667})$/);
 
-    var reg = new RegExp(/[\u0660-\u0669]|[0-9]/);
+    // var reg = new RegExp(/[\u0660-\u0669]|[0-9]/);
 
-
+debugger;
 
 
     if(this.name=="" || this.mobile=="" ||this.email=="" ){
