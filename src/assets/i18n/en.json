@@ -200,7 +200,16 @@
 "finishingOrderText":"Finishing order...",
 "NewAddressText":"New Address",
 "emailNotFound":"Error: Email not found! ",
-"englishNumberReq":"Enter Valid Number"
+"englishNumberReq":"Enter Valid Number",
+"Dammam":"Dammam",
+"Jeddah":"Jeddah",
+"Mecca":"Mecca",
+"Medina":"Medina",
+"Riyadh":"Riyadh",
+"Qatif":"Qatif"
+
+
+
 
 
 

@@ -276,5 +276,38 @@ padding-bottom: 7%;
   // max-width: -webkit-fill-available;
   text-align: end;
 }
+.action-sheet-md .action-sheet-group .button-inner {
+
+  justify-content: center !important;
+}
+.action-sheet-ios .action-sheet-group .button-inner {
+
+  justify-content: center;
+}
+.select-ios .select-icon {
+  padding-left: 20px !important;
+
+  padding-right: 20px !important;
+}
+.select-md .select-icon {
+  padding-left: 20px !important;
+
+  padding-right: 20px !important;
+}
+.select-md {
+  padding: 13px 10px 13px 10px;
+}
+.item-cover {
+
+  position: relative;
+}
+.select-text {
+
+   min-width: auto;
+  text-overflow: visible;
+  overflow: visible;
+
+}
+
 
 }

@@ -89,6 +89,28 @@
 
       </ion-row>
 
+
+      <ion-row>
+
+        <!-- <ion-input  [(ngModel)]="city"  type="text" maxlength="40" placeholder="{{'city' | translate}}">
+
+          </ion-input> -->
+
+          <ion-select interface="action-sheet" [(ngModel)]="city" #citySelect>
+            <ion-option value="Dammam">{{'Dammam' | translate}}</ion-option>
+            <ion-option value="Jeddah	">{{'Jeddah' | translate}}</ion-option>
+            <ion-option value="Mecca">{{'Mecca' | translate}}</ion-option>
+            <ion-option value="Medina">{{'Medina' | translate}}</ion-option>
+            <ion-option value="Riyadh">{{'Riyadh' | translate}}</ion-option>
+            <ion-option value="Qatif">{{'Qatif' | translate}}	</ion-option>
+
+
+
+
+          </ion-select>
+
+  </ion-row>
+
           <!-- <ion-row>
             <ion-col>
               <ion-input [(ngModel)]="city"  maxlength="24" placeholder="{{'city' | translate}}">

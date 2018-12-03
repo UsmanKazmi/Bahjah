@@ -211,7 +211,7 @@ export class PayPage {
     });
     alert.present();
   }
-  
+
 
 
   }
@@ -549,7 +549,7 @@ export class PayPage {
 
 
 
-  AddNewAddress(address1,city,firstname,lastname,ZipPostalCode,phonenumber,email,password){
+   AddNewAddress(address1,city,firstname,lastname,ZipPostalCode,phonenumber,email,password){
 
     let loader = this.loader.create({
       content: MyApp.loadingDataText
@@ -589,7 +589,7 @@ export class PayPage {
 
       this.addressFromForm=HomePage.Address;
       this.country=HomePage.CountryName;
-      this.city=HomePage.City;
+      // this.city=HomePage.City;
       this.state= HomePage.StateProvinceName;
       this.ZipPostalCode= HomePage.ZipCode;
 
@@ -598,7 +598,7 @@ export class PayPage {
 
       this.addressFromForm= "";
       this.country= "";
-      this.city= "";
+      // this.city= "";
       this.state=  "";
       this.ZipPostalCode=  "";
 

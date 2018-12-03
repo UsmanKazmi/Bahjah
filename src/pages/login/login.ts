@@ -155,10 +155,7 @@ arabic(){
 
 
  // Opening a Loader when pressing Button
-     let loader = this.loadingCtrl.create({
-       content: MyApp.loggingInText
-     });
-     loader.present();
+
 
 
 
@@ -167,7 +164,6 @@ arabic(){
      .then(response => {
          this.dataList = response;
          this.dataList = JSON.parse(this.dataList._body);
-         loader.dismiss(); // disabling Loader as soon as the response is fed
 
          // checking for success or failure
          let alertTitle : string = "";
