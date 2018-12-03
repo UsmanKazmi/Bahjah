@@ -92,8 +92,7 @@ export class EditaccountPage {
 
     let EMAILPATTERN = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
     let removeEmptySpacesPattern = /^[a-zA-Z0-9]*$/i;
-
-
+    let arabicnumbers =/^[\u0660-\u0669]{10}$/;
 
 
 
@@ -109,7 +108,7 @@ export class EditaccountPage {
       ],
       email: ["", [Validators.required, Validators.pattern(EMAILPATTERN)]],
       password: ["", Validators.required],
-      number: ["", [Validators.required]]
+      number: ["", [Validators.required, Validators.pattern(arabicnumbers)]],
     });
 
     this.firstname = this.formgroup.controls["firstname"];
@@ -129,7 +128,10 @@ export class EditaccountPage {
 
   // Request for Update Button
   updateAccount(){
+    console.log(this.formgroup)
+
     debugger;
+    if(this.formgroup.valid){
     if(this.formgroup.value.number==""){
 
       let alert = this.alertCtrl.create({
@@ -139,6 +141,8 @@ export class EditaccountPage {
       alert.present();
 
     }
+ 
+
     else{
 
     HomePage.dataFromPhoneNumber = this.formgroup.value.number;
@@ -188,7 +192,15 @@ export class EditaccountPage {
 
   }
 
-
+}
+else
+{
+  let alert = this.alertCtrl.create({
+    title: MyApp.invalidPhone,
+    buttons:[MyApp.okayText]
+  });
+  alert.present();
+}
   }
 
   getCustomerInfo(username, password){

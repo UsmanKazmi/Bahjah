@@ -199,7 +199,9 @@
 "successfullyUpdatedText":"Successfully Updated!",
 "finishingOrderText":"Finishing order...",
 "NewAddressText":"New Address",
-"emailNotFound":"Error: Email not found! "
+"emailNotFound":"Error: Email not found! ",
+"englishNumberReq":"English Number Required"
+
 
 
 

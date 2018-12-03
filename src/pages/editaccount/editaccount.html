@@ -56,7 +56,7 @@
             {{ 'phoneNumberText' | translate }}             </ion-label>
         <ion-item>
           <ion-input  [(ngModel)]="dataFromPhoneNumber"  type="tel"   placeholder="{{ 'Mobile' | translate }}"   formControlName="number" > </ion-input>
-          <!-- <ion-label class="inputLabel validation-end" *ngIf="number.hasError('required') && number.touched" align="right" >{{ '*Required' | translate }}</ion-label> -->
+          <ion-label class="inputLabel validation-end" *ngIf="number.hasError('pattern') && number.touched" align="right" >{{ 'englishNumberReq' | translate }}</ion-label>
 
         </ion-item>
         <ion-label>
