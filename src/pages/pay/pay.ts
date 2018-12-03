@@ -169,6 +169,7 @@ export class PayPage {
 
   //If address is available then dont call the AddNewAddress API
   toCheckDataInsideAddress(){
+    debugger;
     if(this.formgroup.valid){
 
     var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
