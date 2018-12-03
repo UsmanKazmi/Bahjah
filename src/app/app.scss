@@ -729,6 +729,10 @@ page-selectedcard .segment-ios .segment-button.segment-activated {
     background: #4f14d8;
 
 }
+.toast-ios .toast-wrapper.toast-bottom {
+
+    transform: translateY(5px) !important;
+}
 .toast-ios .toast-wrapper {
   margin-bottom: -15px;
 

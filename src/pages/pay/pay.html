@@ -44,27 +44,37 @@
 
 
         <ion-row>
-          <ion-input [(ngModel)]="firstname"  placeholder="{{'firstnameText' | translate}}">
+          <ion-input [(ngModel)]="firstname"  maxlength="50" placeholder="{{'firstnameText' | translate}}">
 
           </ion-input>
-          <ion-input [(ngModel)]="lastname"  placeholder="{{'lastnameText' | translate}}">
+          <ion-input [(ngModel)]="lastname" maxlength="50" placeholder="{{'lastnameText' | translate}}">
 
             </ion-input>
         </ion-row>
 
+        <form  [formGroup]="formgroup">
+
         <ion-row>
-            <ion-input    type="number"  [(ngModel)]="phonenumber"  placeholder="{{'Mobile' | translate}}">
+            <ion-input  maxlength="10"   type="tel"  formControlName="validationPhone"  placeholder="{{'Mobile' | translate}}">
 
             </ion-input>
+            <ion-label class="inputLabel validation-end"  *ngIf="validationPhone.hasError('pattern') && validationPhone.touched" >{{ 'englishNumberReq' | translate }} </ion-label>
 
           </ion-row>
 
 
         <ion-row>
-            <ion-input [(ngModel)]="email" maxlength="40" placeholder="{{'Email' | translate}}">
+            <ion-input formControlName="validationEmail" maxlength="40" placeholder="{{'Email' | translate}}">
 
             </ion-input>
+            <ion-label  class="inputLabel validation-end" *ngIf="validationEmail.hasError('pattern') && validationEmail.touched" >{{ '*invalidEmail' | translate }} </ion-label>
+
           </ion-row>
+        </form>
+
+
+
+
 
           <ion-row>
             <ion-input [(ngModel)]="addressFromForm"  maxlength="40" placeholder="{{'Address' | translate}}">

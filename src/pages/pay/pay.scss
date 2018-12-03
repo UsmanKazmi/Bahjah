@@ -262,5 +262,19 @@ padding-bottom: 7%;
   height: 60px;
   padding: 0px !important;
 }
+.inputLabel {
+  right: 30px !important;
+  background-color: transparent;
+  color: red !important;
+  text-align: end;
+  font-size: small;
+  font-weight: 700;
+  padding-top: 12px;
+}
+.validation-end{
+  // width: 100%;
+  // max-width: -webkit-fill-available;
+  text-align: end;
+}
 
 }

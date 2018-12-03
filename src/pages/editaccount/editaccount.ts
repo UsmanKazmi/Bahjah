@@ -93,6 +93,7 @@ export class EditaccountPage {
     let EMAILPATTERN = /^[a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)*$/i;
     let removeEmptySpacesPattern = /^[a-zA-Z0-9]*$/i;
     let arabicnumbers =/^[\u0660-\u0669]{10}$/;
+    var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
 
 
 
@@ -107,14 +108,14 @@ export class EditaccountPage {
         [Validators.required, Validators.pattern(removeEmptySpacesPattern)]
       ],
       email: ["", [Validators.required, Validators.pattern(EMAILPATTERN)]],
-      password: ["", Validators.required],
-      number: ["", [Validators.required, Validators.pattern(arabicnumbers)]],
+      // password: ["", Validators.required],
+      number: ["", [Validators.required, Validators.pattern(reg)]],
     });
 
     this.firstname = this.formgroup.controls["firstname"];
     this.lastname = this.formgroup.controls["lastname"];
     this.email = this.formgroup.controls["email"];
-    this.password = this.formgroup.controls["password"];
+    // this.password = this.formgroup.controls["password"];
     this.number = this.formgroup.controls["number"];
 
 
@@ -128,11 +129,9 @@ export class EditaccountPage {
 
   // Request for Update Button
   updateAccount(){
-    console.log(this.formgroup)
-
-    debugger;
-    if(this.formgroup.valid){
-    if(this.formgroup.value.number==""){
+    var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
+    if(reg.test(this.formgroup.value.number)==false){
+      console.log(' REG not matched');
 
       let alert = this.alertCtrl.create({
         title: MyApp.invalidPhone,
@@ -141,66 +140,72 @@ export class EditaccountPage {
       alert.present();
 
     }
- 
 
     else{
+      console.log('REG MATCHED');
+      console.log(this.formgroup)
 
-    HomePage.dataFromPhoneNumber = this.formgroup.value.number;
-
-    console.log("Email is",this.dataFromEmail );
-    console.log("cUStomerID is",this.dataFromCustId );
-
-    this.method = "EditCustomerInfo";
-    this.request ="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\"> <soapenv:Header/> <soapenv:Body> <tem:EditCustomerInfo> <!--Optional:--> <tem:usernameOrEmail>"+this.dataFromEmail+"</tem:usernameOrEmail> <!--Optional:--> <tem:userPassword>"+this.dataFromPassword+"</tem:userPassword> <!--Optional:--> <tem:customerId>"+this.dataFromCustId+"</tem:customerId> <!--Optional:--> <tem:email>"+this.dataFromEmail+"</tem:email> <!--Optional:--> <tem:firstName>"+this.dataFromFirstName+"</tem:firstName> <!--Optional:--> <tem:lastName>"+this.dataFromLastName+"</tem:lastName> <!--Optional:--> <tem:CountryId>"+"0"+"</tem:CountryId> <!--Optional:--> <tem:City></tem:City> <!--Optional:--> <tem:DateofBirth></tem:DateofBirth> <!--Optional:--> <tem:Phone>"+this.dataFromPhoneNumber+"</tem:Phone> <!--Optional:--> <tem:Gender></tem:Gender> <!--Optional:--> <tem:username></tem:username> </tem:EditCustomerInfo> </soapenv:Body> </soapenv:Envelope>";
-
-    let loader = this.loadingCtrl.create({
-      content: MyApp.loadingDataText
-    });
-    loader.present();
-
-    this.generalService.webService(this.request, this.method).then(
-      response => {
-        this.dataList = response;
-        this.dataList = JSON.parse(this.dataList._body);
-         console.log(response);
-        loader.dismiss();
-        if (this.dataList.aStatus == "Success") {
-          console.log("Data has been updated");
+      if(this.formgroup.status=="VALID"){
 
 
-          let toast = this.toastCtrl.create({
-            //assigning the Success message to toast
-            message: MyApp.successfullyUpdatedText,
-            cssClass: 'mytoast',
-            duration: 1500
+        HomePage.dataFromPhoneNumber = this.formgroup.value.number;
+
+        console.log("Email is",this.dataFromEmail );
+        console.log("cUStomerID is",this.dataFromCustId );
+    
+        this.method = "EditCustomerInfo";
+        this.request ="<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:tem=\"http://tempuri.org/\"> <soapenv:Header/> <soapenv:Body> <tem:EditCustomerInfo> <!--Optional:--> <tem:usernameOrEmail>"+this.dataFromEmail+"</tem:usernameOrEmail> <!--Optional:--> <tem:userPassword>"+this.dataFromPassword+"</tem:userPassword> <!--Optional:--> <tem:customerId>"+this.dataFromCustId+"</tem:customerId> <!--Optional:--> <tem:email>"+this.dataFromEmail+"</tem:email> <!--Optional:--> <tem:firstName>"+this.dataFromFirstName+"</tem:firstName> <!--Optional:--> <tem:lastName>"+this.dataFromLastName+"</tem:lastName> <!--Optional:--> <tem:CountryId>"+"0"+"</tem:CountryId> <!--Optional:--> <tem:City></tem:City> <!--Optional:--> <tem:DateofBirth></tem:DateofBirth> <!--Optional:--> <tem:Phone>"+this.dataFromPhoneNumber+"</tem:Phone> <!--Optional:--> <tem:Gender></tem:Gender> <!--Optional:--> <tem:username></tem:username> </tem:EditCustomerInfo> </soapenv:Body> </soapenv:Envelope>";
+    
+        let loader = this.loadingCtrl.create({
+          content: MyApp.loadingDataText
         });
-        toast.present(toast);
-        this.navCtrl.setRoot(AccountsPage)
-
-        } else {
-        }
-      },
-      error => {
-        console.log(error);
-        alert( MyApp.errorText);
-        loader.dismissAll();
-
+        loader.present();
+    
+        this.generalService.webService(this.request, this.method).then(
+          response => {
+            this.dataList = response;
+            this.dataList = JSON.parse(this.dataList._body);
+             console.log(response);
+            loader.dismiss();
+            if (this.dataList.aStatus == "Success") {
+              console.log("Data has been updated");
+    
+    
+              let toast = this.toastCtrl.create({
+                //assigning the Success message to toast
+                message: MyApp.successfullyUpdatedText,
+                cssClass: 'mytoast',
+                duration: 1500
+            });
+            toast.present(toast);
+            this.navCtrl.setRoot(AccountsPage)
+    
+            } else {
+            }
+          },
+          error => {
+            console.log(error);
+            alert( MyApp.errorText);
+            loader.dismissAll();
+    
+          }
+        )
+    
+    
       }
-    )
+      else
+      {
+        let alert = this.alertCtrl.create({
+          title: MyApp.allFieldsReqText,
+          buttons:[MyApp.okayText]
+        });
+        alert.present();
+      }
 
 
 
   }
-
-}
-else
-{
-  let alert = this.alertCtrl.create({
-    title: MyApp.invalidPhone,
-    buttons:[MyApp.okayText]
-  });
-  alert.present();
-}
+ 
   }
 
   getCustomerInfo(username, password){
@@ -220,7 +225,6 @@ else
           this.dataFromGetCustomerInfo = response;
           console.log(response);
           loader.dismiss();
-          debugger;
 
           if (this.dataFromGetCustomerInfo.statusText == "OK") {
 

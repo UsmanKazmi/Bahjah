@@ -174,7 +174,7 @@
 "chooseGiftCardText":"Please choose a gift card or press Skip",
 "Gift Message":"Gift Message",
 "emailAlreadyExistText":"Email already exist!",
-"invalidPhone":"invalid Phone Number!",
+"invalidPhone":"Invalid Phone Number!",
 "pay":"pay",
 "emailSentText":"Email Sent!",
 "confirmNewPasswordText":"Enter your new Password",
@@ -200,7 +200,7 @@
 "finishingOrderText":"Finishing order...",
 "NewAddressText":"New Address",
 "emailNotFound":"Error: Email not found! ",
-"englishNumberReq":"English Number Required"
+"englishNumberReq":"Enter Valid Number"
 
 
 

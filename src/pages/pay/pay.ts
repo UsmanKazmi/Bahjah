@@ -14,6 +14,7 @@ import { empty } from '../../../node_modules/rxjs/Observer';
 import { HomePage } from '../home/home';
 import {ThemeableBrowser, ThemeableBrowserOptions,ThemeableBrowserButton, ThemeableBrowserObject} from '@ionic-native/themeable-browser'
 import { PaytabProvider } from './../../providers/paytab/paytab';
+import { FormGroup, AbstractControl, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Generated class for the PayPage page.
@@ -80,9 +81,12 @@ export class PayPage {
   result: any;
   splitCodes: any;
   giftcardURL:any;
+  formgroup:FormGroup;
+  validationEmail:AbstractControl;
+  validationPhone:AbstractControl;
 
-  constructor(public paytab:PaytabProvider,public translate:TranslateService,private themeableBrowser:ThemeableBrowser,private networkInterface: NetworkInterface,public generalService: GeneralService,private storage: Storage,public loader:LoadingController,public alertCtrl:AlertController,public navCtrl: NavController,public platform: Platform, public navParams: NavParams,private iab: InAppBrowser) {
-    debugger;
+  constructor(public paytab:PaytabProvider,public translate:TranslateService,private themeableBrowser:ThemeableBrowser,private networkInterface: NetworkInterface,public generalService: GeneralService,private storage: Storage,public loader:LoadingController,public alertCtrl:AlertController,public navCtrl: NavController,public platform: Platform, public navParams: NavParams,private iab: InAppBrowser, public formbuilder: FormBuilder) {
+    // debugger;
 
     if(this.translate.store.currentLang==='ar'){
       this.currentLang = "Arabic"
@@ -116,14 +120,28 @@ export class PayPage {
     });
 
   });
+
+  let EMAILPATTERN = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$/i;
+
+  let phonePattern = /^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/;
+
+  this.formgroup = formbuilder.group({
+    validationEmail:[HomePage.dataFromEmail,[Validators.required, Validators.pattern(EMAILPATTERN)]],
+    validationPhone: [HomePage.dataFromPhoneNumber, [Validators.required, Validators.pattern(phonePattern)]],
+
+
+  });
+
+  this.validationEmail = this.formgroup.controls['validationEmail'];
+  this.validationPhone = this.formgroup.controls['validationPhone'];
 }
 
 
   private setAddressData () {
     this.firstname = HomePage.dataFromFirstName;
     this.lastname = HomePage.dataFromLastName;
-    this.phonenumber= HomePage.dataFromPhoneNumber;
-    this.email= HomePage.dataFromEmail;
+    this.validationPhone= HomePage.dataFromPhoneNumber;
+    this.validationEmail= HomePage.dataFromEmail;
 
     if (HomePage.AddressId &&  HomePage.AddressId != 0 ) {
       PayPage.paymentAddressId=HomePage.AddressId;
@@ -151,8 +169,10 @@ export class PayPage {
 
   //If address is available then dont call the AddNewAddress API
   toCheckDataInsideAddress(){
+    if(this.formgroup.valid){
+
     var reg = new RegExp(/^(009665|9665|\+9665|05|5)(5|0|3|6|4|9|1|8|7)([0-9]{7})$/);
-    if(this.firstname=="" || this.lastname=="" ||this.email=="" || this.addressFromForm==""){
+    if(this.firstname=="" || this.lastname=="" || this.validationEmail.value=="" || this.addressFromForm=="" || this.validationPhone.value==""){
 
       let alert = this.alertCtrl.create({
         title:this.emptyFieldText,
@@ -160,7 +180,7 @@ export class PayPage {
       });
       alert.present();
     }
-    else if(reg.test(this.phonenumber)==false){
+    else if(reg.test(this.validationPhone.value)==false){
       let alert = this.alertCtrl.create({
         title:MyApp.invalidPhone,
         buttons:[MyApp.okayText]
@@ -170,8 +190,7 @@ export class PayPage {
     else{
     //if the address1 object is {""} means empty
     if(this.useAddNewService == true){
-
-      this.AddNewAddress(this.addressFromForm,this.city,this.firstname,this.lastname,this.ZipPostalCode,this.phonenumber,this.email,this.password);
+      this.AddNewAddress(this.addressFromForm,this.city,this.firstname,this.lastname,this.ZipPostalCode,this.validationPhone.value,this.validationEmail.value,this.password);
     }
     else
     {
@@ -184,7 +203,15 @@ export class PayPage {
     }
 
   }
-
+  }
+  else {
+    let alert = this.alertCtrl.create({
+      title:MyApp.allFieldsReqText,
+      buttons:[MyApp.okayText]
+    });
+    alert.present();
+  }
+  
 
 
   }
