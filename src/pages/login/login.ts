@@ -34,6 +34,7 @@ export class LoginPage {
   formgroup:FormGroup;
   username:AbstractControl;
   password:AbstractControl;
+  something:any;
 
 
   method : string = "";
@@ -41,6 +42,7 @@ export class LoginPage {
   dataList : any = "";
   myVariable: string;
   tabBarElement: any;
+  disableButton: boolean;
 
 
 
@@ -94,7 +96,10 @@ export class LoginPage {
   var modalPage = this.modalCtrl.create(WorkstatusmodalPage); modalPage.present();
   }
 ionViewWillEnter(){
-
+  let tabBarElement = document.querySelector('.tabbar.show-tabbar');
+          if (tabBarElement != null) {
+            this.tabBarElement.style.display = 'none'; // or whichever property which you want to access
+          }
 }
 
 
@@ -122,6 +127,7 @@ arabic(){
 
 
   openHomePage(){
+    this.disableButton = true;
 
 
     if (this.formgroup.valid) {
@@ -183,7 +189,28 @@ arabic(){
            });
 
            toast.present(toast);
+           this.disableButton = false;
+
          }
+
+
+         //for Customer is deleted
+         if (this.dataList.aStatus == "Deleted") {
+
+
+          let toast = this.toastCtrl.create({
+              //assigning the success message to toast only
+              message: this.dataList.aMessage,
+
+              cssClass: 'mytoast',
+              duration: 3500
+          });
+
+          toast.present(toast);
+          this.disableButton = false;
+
+        }
+
 
          //FOR wrongPasswordText ERROR
 
@@ -200,6 +227,8 @@ arabic(){
           });
 
           toast2.present(toast2);
+          this.disableButton = false;
+
         }
 
 
@@ -242,8 +271,9 @@ arabic(){
          buttons:['OK']
        });
        alert.present();
-     }
 
+       this.disableButton = false;
+      }
 
 
 
@@ -261,6 +291,9 @@ arabic(){
   ionViewWillLeave() {
     // Unregister the custom back button action for this page
     this.unregisterBackButtonAction && this.unregisterBackButtonAction();
+    let tabBarElement = document.querySelector('.tabbar.show-tabbar');
+      this.tabBarElement.style.display = 'flex'; // or whichever property which you want to access
+
 }
 
 
@@ -306,6 +339,8 @@ presentConfirm() {
   });
 
 }
+
+
 deviceHepticFeedback(){
   this.deviceFeedback.haptic(0);
   this.deviceFeedback.acoustic();

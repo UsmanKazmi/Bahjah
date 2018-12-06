@@ -42,7 +42,8 @@ export class WalletPage {
 
   addtoWallettext:string = "Please. press OK to add a gift card to your Wallet."
 
-  constructor(public modalCtrl : ModalController,public storage:Storage,public navCtrl: NavController, public navParams: NavParams, public generalService:GeneralService,public loader:LoadingController,public alertCtrl: AlertController,public toastCtrl:ToastController,public platform:Platform) {
+  constructor(public modalCtrl : ModalController,public storage:Storage,public navCtrl: NavController, public navParams: NavParams, public generalService:GeneralService,public loader:LoadingController,public alertCtrl: AlertController,public toastCtrl:ToastController,public platform:Platform,public app: App,
+    ) {
     this.tabIndex = TabsPage.tabIndex;
 
     this.storage.get("usr").then((usr) => {
@@ -53,13 +54,24 @@ export class WalletPage {
         this.password = pwd;
     });
 
+
+
+
+
     setTimeout( () => {
+
+      // if(this.username=="kazmi58@gmail.com" && this.password=="12345"){
+
+      //   this.openLoginToContinueDialogue();
+      // }
+      // else {
       if (this.username != "" && this.username != null && this.password != "" && this.password != null ) {
 
       } else {
         this.navCtrl.setRoot(LoginPage);
 
-      }
+
+    }
     }, 500);
     console.log("TAB INDEX IS",TabsPage.tabIndex)
 
@@ -188,9 +200,13 @@ export class WalletPage {
 
 }
   addWallet(){
+    if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    }
+    else {
     this.navCtrl.setRoot(AddcardPage);
     this.navCtrl.parent.select(2);
-
+    }
   }
   generateQRCode(event,item){
     let modal = this.modalCtrl.create(QrmodalPage, {data: item});
@@ -237,9 +253,16 @@ export class WalletPage {
 
 
 ionViewDidEnter() {
+
+  if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+    this.openLoginToContinueDialogue();
+  }
+  else {
   this.getCustWalletSevice(HomePage.dataFromEmail,HomePage.dataFromPassword);
 
   this.initializeBackButtonCustomHandler();
+}
+
 }
 public initializeBackButtonCustomHandler(): void {
   this.unregisterBackButtonAction = this.platform.registerBackButtonAction(() => {
@@ -263,6 +286,32 @@ removezero(item) {
   let newValue = itemToConvert.split('.')[0];
   return newValue;
   }
+
+
+  openLoginToContinueDialogue(){
+    let alert = this.alertCtrl.create({
+      title: MyApp.loginText,
+      message: MyApp.needToLoginFirstText,
+      buttons: [
+        {
+          text: MyApp.alertCancelText,
+          role: 'cancel',
+          handler: () => {
+            this.navCtrl.getByIndex(0);
+            this.navCtrl.parent.select(0);          }
+        },
+        {
+          text: MyApp.loginText,
+          handler: () => {
+            this.app.getRootNav().setRoot(LoginPage);
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
+
 
 
   }

@@ -72,6 +72,7 @@ export class MyApp {
   static successfullyUpdatedText: any;
   static finishingOrderText: any;
   static emailNotFound: any;
+  static loginText: any;
 
   constructor(public generalService:GeneralService, public toastCtrl: ToastController ,public alertCtrl:AlertController,private platform: Platform,private translate: TranslateService,  statusBar: StatusBar, splashScreen: SplashScreen, storage: Storage, private deeplinks:Deeplinks) {
     platform.ready().then(() => {
@@ -89,10 +90,15 @@ export class MyApp {
         if (value == "TabsPage") {
           this.rootPage = TabsPage;
         } else if (value == "LoginPage") {
-          this.rootPage = LoginPage;
-        } else {
+          this.rootPage = TabsPage;
+        }else if (value == "TutorialPage") {
+          this.rootPage = TabsPage;
+        }
+        else {
           this.rootPage = TutorialPage;
         }
+
+
         this.deeplinks.routeWithNavController(this.navChild,{
 
 
@@ -208,7 +214,7 @@ export class MyApp {
 
 
         } else {
-          this.currentLang = "ar";
+          this.currentLang = "ar"; //change to ar in final build
           this.initTranslate(this.currentLang);
           this.translateLoadingText(this.currentLang);
 
@@ -564,6 +570,14 @@ this.translate.get('successfullyUpdatedText').subscribe(
   value => {
     // value is our translated string
      MyApp.successfullyUpdatedText = value;
+  }
+
+
+)
+this.translate.get('login').subscribe(
+  value => {
+    // value is our translated string
+     MyApp.loginText = value;
   }
 
 

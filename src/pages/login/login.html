@@ -52,15 +52,16 @@
 
   <ion-buttons>
 
-    <button align="center" class="buttonlogin" tappable (click)="openHomePage()">
+    <button align="center" [disabled]="disableButton" class="buttonlogin" tappable (click)="openHomePage()">
       {{ 'login' | translate }}    </button>
   </ion-buttons>
 
 
   <div padding align="center" style=" padding-top: 2%">
-      <button tappable (click)="openRegistration()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;
+      <button tappable (click)="openRegistration()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;line-height: 2;
+
       font-weight: 900; "> {{ 'registration' | translate }}</button>
-    <button tappable (click)="openResetPassword()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;
+    <button tappable (click)="openResetPassword()" STYLE="background-color:transparent; color:#4f14d8;    font-size: small;    line-height: 2;
       font-weight: 900;">{{ 'resetPassword' | translate }}</button>
 
 

@@ -7,7 +7,7 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 import { BuycarddetailsPage } from './../buycarddetails/buycarddetails';
 import { BuycardconfirmPage } from './../buycardconfirm/buycardconfirm';
 import { GeneralService } from "./../../providers/general-service/GeneralService";
-import { LoadingController, Navbar, Segment } from "ionic-angular";
+import { LoadingController, Navbar, Segment, App } from "ionic-angular";
 import { ToastController,AlertController, } from "ionic-angular";
 import { TabsPage } from "./../tabs/tabs";
 import { Component, ComponentFactoryResolver, ViewChild,ChangeDetectorRef } from "@angular/core";
@@ -84,6 +84,7 @@ export class SelectedcardPage {
     private socialSharing: SocialSharing,
     public platform:Platform,
     public alertCtrl:AlertController,
+    public app: App,
     // private callNumber: CallNumber
   ) {
 
@@ -96,6 +97,10 @@ export class SelectedcardPage {
     // )
      //for removing tab in this page
      this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+
+    console.log('tabBarElement',this.tabBarElement)
+
+
     // this.value2 = navParams.get("items");
     // SelectedcardPage.productId = this.value2.aId;
     this.cards = "About Card";
@@ -117,17 +122,25 @@ export class SelectedcardPage {
     this.storage.get('usr').then((usr) => {
       this.user = usr;
         this.storage.get('pwd').then((pwd) => {
+
+
           if(!usr || !pwd){
-            let toast = this.toastCtrl.create({
-              //assigning the Success message to toast
-              message: MyApp.needToLoginFirstText,
-              cssClass: 'mytoast',
-              duration: 3500
-            });
-            toast.present(toast);
-            this.navCtrl.setRoot(LoginPage)
+
+
+            // let toast = this.toastCtrl.create({
+            //   //assigning the Success message to toast
+            //   message: MyApp.needToLoginFirstText,
+            //   cssClass: 'mytoast',
+            //   duration: 3500
+            // });
+            // toast.present(toast);
+            this.navCtrl.setRoot(TabsPage)
 
           }
+
+
+
+
 
           this.password = pwd;
             this.GetProductDetails(usr,pwd,loader);
@@ -281,6 +294,11 @@ ionViewDidEnter() {
 
   confirmPage(){
 
+    if(this.user=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    }
+
+    else {
     if (this.platform.is('ios')) {
 
 
@@ -308,6 +326,7 @@ ionViewDidEnter() {
 
     this.navCtrl.push(BuycarddetailsPage,{item:this.data});
   }
+}
   }
 
 
@@ -322,7 +341,7 @@ ionViewDidEnter() {
     //   androiddelay:50,
     //  };
     //  this.nativePageTransitions.slide(options);
-
+    debugger;
     let tabBarElement = document.querySelector('.tabbar.show-tabbar');
     if (tabBarElement != null) {
       this.tabBarElement.style.display = 'none'; // or whichever property which you want to access
@@ -349,6 +368,12 @@ ionViewDidEnter() {
 
 
   addToWishList(event,data) {
+    if(this.user=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    }
+
+    else {
+
 
     // Opening a Loader for Loding data
     let loader = this.loadingCtrl.create({
@@ -450,7 +475,7 @@ ionViewDidEnter() {
 
       });
 
-
+    }
   }
 
   share(event,data) {
@@ -554,6 +579,29 @@ openDialPad(aPhoneNumber){
   // this.callNumber.callNumber(aPhoneNumber, true)
   // .then(res => console.log('Launched dialer!', res))
   // .catch(err => console.log('Error launching dialer', err));
+}
+
+openLoginToContinueDialogue(){
+  let alert = this.alertCtrl.create({
+    title: 'Login to Continue',
+    message: 'Do you want to login into this app?',
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Login',
+        handler: () => {
+          this.app.getRootNav().setRoot(LoginPage);
+        }
+      }
+    ]
+  });
+  alert.present();
 }
 
 

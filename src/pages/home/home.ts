@@ -102,25 +102,31 @@ export class HomePage {
     });
 
     loader.present();
-
       if (this.user != "" && this.user != null && this.password != "" && this.password != null  ) {
         this.GetSideMenuCategories(this.user,this.password,loader);
         this.GetDashboard(this.user,this.password,loader);
         //  this.getProductsByFilter(this.user,this.password,'Best Selling',16);
 
-      } else {
+      }
+
+
+      else {
+        this.user="guest@apptech.com.tr"
+        this.password="guest@apptech.com.tr"
+        this.storage.set('usr',"guest@apptech.com.tr");
+        this.storage.set('pwd','guest@apptech.com.tr');
         loader.dismiss();
-            let toast = this.toastCtrl.create({
+            // let toast = this.toastCtrl.create({
 
-              //assigning the success message to toast only
-              message: MyApp.needToLoginFirstText,
-              duration: 1500
-            });
-            toast.present(toast);
+            //   //assigning the success message to toast only
+            //   message: MyApp.needToLoginFirstText,
+            //   duration: 1500
+            // });
+            // toast.present(toast);
 
 
-        this.navCtrl.setRoot(LoginPage);
-
+            this.GetSideMenuCategories(this.user,this.password,loader);
+            this.GetDashboard(this.user,this.password,loader);
       }
     }, 1000);
 

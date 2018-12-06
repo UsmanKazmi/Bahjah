@@ -142,7 +142,7 @@ ion-img {
     content: "";
 
 
-    
+
 }
 
 .cardName{
@@ -226,7 +226,7 @@ ion-img {
 .segment-md .segment-button.segment-activated {
   // border-color: black;
   opacity: 1;
-  font-size: 14px;
+  font-size: 17px !important;
   color: #662aec;
   // font-weight: 600;
   font-weight: bold;
@@ -241,14 +241,14 @@ ion-img {
   // font-weight: 600;
   // font-family: monospace;
   opacity: 1;
-  font-size: 13px;
+  font-size: 17px !important;
   color: black;
 
 }
 .segment-ios .segment-button.segment-activated {
   // border-color: black;
   opacity: 1;
-  font-size: 14px;
+  font-size: 17px !important;
   font-weight: bold;
 
   color: #662aec;
@@ -262,6 +262,9 @@ ion-img {
 
 
 }
+.no-scroll .scroll-content{
+  overflow: hidden;
+}
 .segment-ios .segment-button {
   border: 0px solid gray !important;
 
@@ -269,7 +272,7 @@ ion-img {
   // font-weight: 600;
   // font-family: monospace;
   opacity: 1;
-  font-size: 13px;
+  font-size: 17px !important;
   font-weight: bold;
 
   color: black;

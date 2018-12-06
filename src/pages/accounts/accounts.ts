@@ -8,7 +8,7 @@ import { GeneralService } from './../../providers/general-service/GeneralService
 import { FormBuilder } from '@angular/forms';
 import { EditaccountPage } from "./../editaccount/editaccount";
 import { Component } from "@angular/core";
-import { IonicPage, LoadingController, NavController, NavParams, ToastController,App,Platform } from "ionic-angular";
+import { IonicPage, LoadingController, NavController, NavParams, ToastController,App,Platform, AlertController } from "ionic-angular";
 import { TranslateService } from "../../../node_modules/@ngx-translate/core";
 import { Storage } from "@ionic/storage";
 import { MyApp } from '../../app/app.component';
@@ -55,7 +55,7 @@ export class AccountsPage {
   data: any = [];
   unregisterBackButtonAction: any;
 
-  constructor(public nativePageTransitions:NativePageTransitions,public platform:Platform,public app: App,public toastCtrl:ToastController ,public loadingCtrl: LoadingController, public generalService: GeneralService, private storage: Storage, public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService
+  constructor(public nativePageTransitions:NativePageTransitions,public platform:Platform,public app: App,public toastCtrl:ToastController ,public loadingCtrl: LoadingController, public generalService: GeneralService, private storage: Storage, public navCtrl: NavController, public navParams: NavParams, public translate: TranslateService,public alertCtrl:AlertController
   ) {
 
 
@@ -218,6 +218,11 @@ export class AccountsPage {
   }
 
   public gotoEditAccountPage() {
+    if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    }
+
+    else {
     // let options: NativeTransitionOptions = {
     //   direction: 'left',
     //   duration: 400,
@@ -230,22 +235,18 @@ export class AccountsPage {
 
     // this.nativePageTransitions.slide(options);
     this.navCtrl.push(EditaccountPage);
-
+    }
   }
 
   openUsedCardsPage(){
-    // let options: NativeTransitionOptions = {
-    //   direction: 'left',
-    //   duration: 400,
-    //   slowdownfactor: -1,
-    //   iosdelay: 50,
-    //   androiddelay:50,
+
+    if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    } else {
 
 
-    //  };
-
-    // this.nativePageTransitions.slide(options);
     this.navCtrl.push(UsedcardsPage);
+    }
   }
 
   ionViewDidLoad() {
@@ -316,6 +317,12 @@ export class AccountsPage {
     this.navCtrl.push(EditaccountPage);
   }
   openWishList(){
+
+    if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+      this.openLoginToContinueDialogue();
+    }
+
+    else {
     // let options: NativeTransitionOptions = {
     //   direction: 'left',
     //   duration: 400,
@@ -328,6 +335,7 @@ export class AccountsPage {
 
     // this.nativePageTransitions.slide(options);
     this.navCtrl.push(WishlistPage)
+    }
   }
 
 
@@ -356,4 +364,28 @@ openHome(){
   this.navCtrl.getByIndex(0);
   this.navCtrl.parent.select(0);
 }
+
+openLoginToContinueDialogue(){
+  let alert = this.alertCtrl.create({
+    title: 'Login to Continue',
+    message: 'Do you want to login into this app?',
+    buttons: [
+      {
+        text: 'Cancel',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      },
+      {
+        text: 'Login',
+        handler: () => {
+          this.app.getRootNav().setRoot(LoginPage);
+        }
+      }
+    ]
+  });
+  alert.present();
+}
+
 }

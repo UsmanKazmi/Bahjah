@@ -1,9 +1,10 @@
+import { LoginPage } from './../login/login';
 import { ScanqrPage } from './../scanqr/scanqr';
 import { MyApp } from './../../app/app.component';
 import { TabsPage } from "./../tabs/tabs";
 import { HomePage } from "./../home/home";
 import { GeneralService } from "./../../providers/general-service/GeneralService";
-import { ToastController, Platform } from "ionic-angular";
+import { ToastController, Platform, App } from "ionic-angular";
 import { AddcardserialPage } from "./../addcardserial/addcardserial";
 import { Component } from "@angular/core";
 import {
@@ -44,11 +45,16 @@ export class AddcardPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     private qrScanner: QRScanner,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public app: App,
+
   ) {
     this.username = HomePage.dataFromEmail;
     this.password = HomePage.dataFromPassword;
-    console.log("TAB INDEX IS", TabsPage.tabIndex);
+
+
+
+
   }
 
   ionViewDidLoad() {
@@ -60,7 +66,14 @@ export class AddcardPage {
   }
 
   ionViewDidEnter() {
-    this.initializeBackButtonCustomHandler();
+    if(this.username=="guest@apptech.com.tr" && this.password=="guest@apptech.com.tr"){
+
+      this.openLoginToContinueDialogue();
+    }
+    else {
+
+    this.initializeBackButtonCustomHandler();}
+
   }
   public initializeBackButtonCustomHandler(): void {
     this.unregisterBackButtonAction = this.platform.registerBackButtonAction(
@@ -217,6 +230,28 @@ export class AddcardPage {
   openScanPage(){
     this.navCtrl.push(ScanqrPage);
 
+  }
+  openLoginToContinueDialogue(){
+    let alert = this.alertCtrl.create({
+      title: 'Login to Continue',
+      message: 'Do you want to login into this app?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          handler: () => {
+            this.navCtrl.getByIndex(0);
+            this.navCtrl.parent.select(0);          }
+        },
+        {
+          text: 'Login',
+          handler: () => {
+            this.app.getRootNav().setRoot(LoginPage);
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
 }

@@ -1,3 +1,4 @@
+import { TabsPage } from './../tabs/tabs';
 import { timeout } from 'rxjs/operator/timeout';
 import { LoginPage } from './../login/login';
 import { HomePage } from './../home/home';
@@ -83,7 +84,7 @@ export class TutorialPage {
   }
 
   openLoginScreen(){
-    this.navCtrl.push(LoginPage ,{animate: true, direction: 'forward'});
+    this.navCtrl.push(TabsPage ,{animate: true, direction: 'forward'});
 
 
   }

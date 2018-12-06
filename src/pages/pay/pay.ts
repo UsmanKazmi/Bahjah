@@ -220,7 +220,7 @@ export class PayPage {
 
 
   openPayPageApi(loader){
-
+    debugger;
     let body = 'merchant_email=zaki_us94@hotmail.com'+
     '&secret_key=KbAfc2tncaeJoTIWY8hy7iGg7NEGzBLkMlzYo2mBdAkCu2ysbQ1i8HzfudW4PIoC4YAs1X4eyoR2rquDgwVpdvEIJBNyjcanaLQb'+
     '&site_url=' +'https://bahjahcards.com'+
@@ -229,8 +229,8 @@ export class PayPage {
     '&cc_first_name=' + this.firstname+//
     '&cc_last_name=' + this.lastname+//
     '&cc_phone_number=' + '00966'+//
-    '&phone_number=' + this.phonenumber+//
-    '&email=' + this.email+//
+    '&phone_number=' + this.validationPhone.value+//
+    '&email=' + this.validationEmail.value+//
     '&products_per_title=' + this.ProductData.aName+
     '&unit_price=' + this.ProductData.FinalPrice+
     '&quantity=' + '1'+
@@ -262,8 +262,8 @@ export class PayPage {
       secretKey:'KbAfc2tncaeJoTIWY8hy7iGg7NEGzBLkMlzYo2mBdAkCu2ysbQ1i8HzfudW4PIoC4YAs1X4eyoR2rquDgwVpdvEIJBNyjcanaLQb',
       transactionTitle:this.username,
       amount:this.ProductData.FinalPrice,
-      customer_email:this.email,
-      customer_phone_number:this.phonenumber,
+      customer_email:this.validationEmail.value,
+      customer_phone_number:this.validationPhone.value,
       order_id:this.ProductData.aSku,
       product_name:this.ProductData.aName,
       address_billing:this.addressFromForm ,
